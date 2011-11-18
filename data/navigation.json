@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Recent",
+    "url": "/"
+  },
+  {
+    "title": "About",
+    "url": "/about.html"
+  },
+  {
+    "title": "Gallery",
+    "url": "/gallery.html"
+  },
+  {
+    "title": "Contact",
+    "url": "/contact.html"
+  }
+]

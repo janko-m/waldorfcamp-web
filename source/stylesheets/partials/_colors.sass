@@ -1,0 +1,30 @@
+$text: lighten(black, 40%)
+
+$link-active: hsl(50, 50%, 50%)
+$link-hover: adjust-lightness($link-active, -10%)
+
+$img: darken(white, 40%)
+
+$subtle: darken(white, 30%)
+
+body
+  color: $text
+
+#tagline
+  color: $subtle
+
+nav
+  &, a
+    color: $subtle
+
+  .current a
+    color: $link-hover
+
+a
+  +link-colors($link-active, $link-hover)
+  text-decoration: none
+  &, &:hover
+    +transition(color .2s ease 0s)
+
+img, iframe
+  border: 1px solid $img

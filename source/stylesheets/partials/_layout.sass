@@ -1,0 +1,71 @@
++establish-baseline
+
+#wrapper
+  +trailer
+  width: 960px
+  max-width: 100%
+  margin: 0 auto rhythm() auto
+
+header hgroup, article, section
+  +clearfix
+
+article
+  +trailer
+
+h1
+  margin: 0
+  +adjust-font-size-to(40px, 2)
+
+h2
+  +trailer(0)
+  +adjust-font-size-to(28px, 2)
+
+#logo
+  +leader
+  +trailer
+  float: left
+
+#tagline
+  +leader(2.5)
+  +trailer(0)
+  float: right
+
+nav
+  +horizontally-center
+  +trailer(2)
+  ol
+    margin: rhythm(0.5) 0
+    li
+      margin: 0 rhythm(0.5)
+
+#main
+  +padding-trailer(0.5)
+  clear: both
+
+#map
+  float: right
+  margin-left: rhythm()
+
+#contact
+  width: 630px
+  margin: 0 auto
+
+  article
+
+    &:nth-of-type(2n+1)
+      .img
+        float: left
+      .info
+        width: 435px
+        float: right
+
+    &:nth-of-type(2n)
+      width: 500px
+      .img
+        float: right
+      .info
+        width: 290px
+        float: left
+
+        h1
+          text-align: right

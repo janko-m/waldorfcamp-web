@@ -1,0 +1,30 @@
+$body: Verdana, Arial, sans-serif
+$heading: 'Love Ya Like A Sister', Georgia, 'Palatino Linotype', 'Book Antiqua', serif
+
+body
+  font-family: $body
+
+h1, h2, h3
+  font:
+    family: $heading
+    weight: normal
+
+p
+  text-indent: rhythm(0.5)
+
+em
+  font:
+    style: normal
+    weight: bold
+
+#logo
+  +adjust-font-size-to(96px, 4)
+
+#tagline
+  font-size: 24px
+
+nav
+  font:
+    family: $heading
+    size: 26px
+  text-transform: uppercase
