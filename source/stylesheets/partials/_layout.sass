@@ -20,6 +20,14 @@ h2
   +trailer(0)
   +adjust-font-size-to(28px, 2)
 
+.img
+  +leader
+  float: right
+  margin-left: rhythm(0.5)
+
+  img
+    max-height: 100%
+
 #logo
   +leader
   +trailer
@@ -51,6 +59,9 @@ nav
   margin: 0 auto
 
   article
+
+    .img
+      margin: 0
 
     &:nth-of-type(2n+1)
       .img
