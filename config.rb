@@ -41,7 +41,7 @@ set :haml, {:format => :html5}
 require 'coffee-filter'
 
 # Automatic image dimensions on image_tag helper
-activate :automatic_image_sizes
+# activate :automatic_image_sizes
 
 ###
 # Page command
