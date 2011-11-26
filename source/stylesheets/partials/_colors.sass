@@ -27,6 +27,25 @@ a
 img, iframe
   border: 1px solid $img
 
+#gallery article
+  h1
+    background: darken(white, 5%)
+    color: $text
+
+  h2
+    color: $subtle
+
+  a
+    border: 1px solid darken(white, 10%)
+    &:hover
+      border: 1px solid darken(white, 17%)
+      +box-shadow(darken(white, 10%) 0 0 7px)
+      h1
+        background: darken(white, 8%)
+        color: darken($text, 20%)
+      h2
+        color: darken($subtle, 20%)
+
 #workshops article
   $i: 0
   @each $workshop in yoga, painting, circus, singing

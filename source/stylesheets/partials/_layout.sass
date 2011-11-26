@@ -7,7 +7,7 @@
   margin: 0 auto rhythm() auto
 
 header hgroup, article, section
-  +clearfix
+  +pie-clearfix
 
 article
   +trailer
@@ -65,6 +65,26 @@ nav
 
   h1
     padding: rhythm()
+
+#gallery
+  +clearfix
+
+  article
+    float: left
+    width: 170px
+    margin: 10px
+
+    a
+      display: block
+      height: rhythm(7.5)
+      padding: rhythm(0.5)
+
+    h1
+      padding: rhythm(2) 0
+
+    h2
+      +leader(0)
+      font-size: 24px
 
 #contact
   width: 630px

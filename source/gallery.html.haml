@@ -2,19 +2,9 @@
 title: 'Gallery'
 ---
 
-%article#gallery
-
--# %article
--#   # Gallery
-
--#   1. [Olib 2010](#)
--#   2. [Olib 2009](#)
--#   3. [Silba 2008](#)
--#   4. [Iž 2007](#)
--#   5. [Iž 2006](#)
--#   6. [Iž 2005](#)
--#   7. [Badija 2004](#)
--#   8. [Badija 2003](#)
--#   9. [Badija 2002](#)
--#   10. [Badija 2001](#)
-
+%section#gallery
+  - data.camps.each do |camp|
+    %article
+      %a{href: '#'}
+        %h1= camp.year
+        %h2= camp.location
