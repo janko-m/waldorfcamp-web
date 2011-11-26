@@ -23,8 +23,28 @@ nav
 a
   +link-colors($link-active, $link-hover)
   text-decoration: none
-  &, &:hover
-    +transition(color .2s ease 0s)
 
 img, iframe
   border: 1px solid $img
+
+#workshops article
+  $i: 0
+  @each $workshop in yoga, painting, circus, singing
+    $i: $i + 1
+    &:nth-of-type(#{$i}) a
+      background: image-url("#{$workshop}/main.jpg")
+
+  a
+    +opacity(0.8)
+    +text-shadow(rgba(black, 0.5) 1px 1px 0px)
+    height: 100px
+    &:hover
+      +opacity(1)
+      +text-shadow(rgba(black, 0.7) 1px 1px 0px)
+      background-position: bottom
+      h1
+        color: $link-active
+
+  h1
+    +opacity(1)
+    color: darken(white, 30%)
