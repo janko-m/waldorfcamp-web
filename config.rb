@@ -29,6 +29,8 @@ end
 ###
 # Haml
 ###
+set :markdown, :layout_engine => :haml
+set :redcarpet, Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true)
 
 set :haml, {:format => :html5}
 
