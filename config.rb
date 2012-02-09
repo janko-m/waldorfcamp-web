@@ -1,6 +1,8 @@
 require 'redcarpet'
 
 set :markdown_engine, :redcarpet
+set :markdown, :layout_engine => :haml
+set :redcarpet, Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true)
 
 helpers do
   def current_page?(url)
@@ -29,8 +31,6 @@ end
 ###
 # Haml
 ###
-set :markdown, :layout_engine => :haml
-set :redcarpet, Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true)
 
 set :haml, {:format => :html5}
 
