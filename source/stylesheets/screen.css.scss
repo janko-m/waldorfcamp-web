@@ -1,0 +1,28 @@
+@import "compass";
+
+$link1: hsl(0, 50%, 50%);
+$link2: adjust-lightness($link1, -10%);
+
+body {
+  margin: 50px;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  line-height: 24px;
+  color: lighten(black, 30%);
+}
+
+a {
+  @include hover-link;
+  @include link-colors($link1, $link2, $link1, $link1, $link2);
+}
+
+nav {
+  ol {
+    @include clearfix;
+    @include no-bullets;
+    padding: 0;
+  }
+  li { float: left; }
+  a { display: block; padding: 10px; }
+}
+
+#main { width: 800px; }
