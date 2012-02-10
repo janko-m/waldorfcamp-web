@@ -4,19 +4,19 @@
     %meta{charset: 'utf-8'}
     %link{name: 'robots', content: 'noindex'}
     %title= 'Waldorf Camp' + (data.page.title ? " &middot; #{data.page.title}" : '')
-    = stylesheet_link_tag 'normalize'
+    %link{href: 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Abril+Fatface', rel: 'stylesheet', type: 'text/css'}
     = stylesheet_link_tag 'screen'
     %script{src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
     = javascript_include_tag 'init'
   %body
-    %header
-      %hgroup
-        %h1#logo= link_to 'Waldorf Camp', '/'
-        %h2#tagline An Active and Dynamic Vacation
     %nav
       %ol
         - data.navigation.each do |link|
           %li{class: (current_page?(link.url) ? 'current' : '' )}
             = link_to link.title, link.url
+    %header
+      .inner
+        %h1#logo= link_to 'Waldorf Camp', '/'
+        %h2#tagline An Active and Dynamic Vacation
     #main
       = yield

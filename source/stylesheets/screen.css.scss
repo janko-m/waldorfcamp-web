@@ -1,13 +1,49 @@
-@import "compass";
+@import 'compass';
 
-$link1: hsl(0, 50%, 50%);
+$site: 46.971em;
+
+$text: lighten(black, 30%);
+
+$serif: 'Abril Fatface', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+$sans-serif: Lato, 'Helveteica Neue', 'Helvetica', sans-serif;
+
+$color1: #FAE187;
+$color2: #FF6633;
+$color3: #FFEBA3;
+$color4: #3B46AD;
+$color5: #8792FA;
+
+$link1: $color2;
 $link2: adjust-lightness($link1, -10%);
 
 body {
-  margin: 50px;
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  line-height: 24px;
-  color: lighten(black, 30%);
+  margin: 0;
+  padding: 0;
+  font: { family: $sans-serif; size: 16px; }
+  margin-top: 1.416em;
+  line-height: 1.618em;
+  color: $text;
+}
+
+#{elements-of-type(block)} {
+  margin-top: 0;
+}
+
+h1 {
+  font: { size: 3.706em; weight: 300; }
+  line-height: 1em;
+  margin-bottom: 0.382em;
+}
+
+h2 {
+  font: { size: 2.291em; weight: 700; }
+  margin: 0.875em 0 0.618em 0;
+}
+
+h3 {
+  font: { size: 1.416em; weight: 400; }
+  text-transform: uppercase;
+  margin: 0.875em 0 0.541em 0;
 }
 
 a {
@@ -15,14 +51,60 @@ a {
   @include link-colors($link1, $link2, $link1, $link1, $link2);
 }
 
+ul {
+}
+
+nav, header .inner, #main { width: $site; margin: 0 auto; }
+
+header {
+  background: $color3;
+  margin-bottom: 3.706em;
+}
+
+.inner {
+  position: relative;
+}
+
+#logo, #tagline { margin: 0; }
+
+#logo {
+  font: { family: $serif; size: 5.997em; weight: 400; }
+  margin-bottom: 0;
+  color: $color2;
+  a {
+    line-height: 0.875em;
+    &:hover { text-decoration: none; color: $color2; }
+  }
+}
+
+#tagline {
+  font: { size: 1em; weight: 300; }
+  text-transform: uppercase;
+  letter-spacing: 0.236em;
+  position: absolute;
+  top: 5.997em;
+  right: 11.089em;
+  color: lighten($color2, 0%);
+}
+
 nav {
+  @include clearfix;
   ol {
     @include clearfix;
     @include no-bullets;
+    font: { weight: 300; }
+    text-transform: uppercase;
+    margin: 0;
     padding: 0;
+    margin-right: 5.997em;
+    float: right;
   }
-  li { float: left; }
-  a { display: block; padding: 10px; }
+  li {
+    float: left;
+    &.current a { color: $color2; font-weight: 400; line-height: 1.618em; }
+  }
+  a {
+    @include link-colors($color1, $color2, $color2, $color1, $color2);
+    display: block;
+    padding: 0.618em; }
 }
-
-#main { width: 800px; }
