@@ -15,7 +15,7 @@
           %li{class: (current_page?(link.url) ? 'current' : '' )}
             = link_to link.title, link.url
     %header
-      .inner
+      %hgroup
         %h1#logo= link_to 'Waldorf Camp', '/'
         %h2#tagline An Active and Dynamic Vacation
     #main
