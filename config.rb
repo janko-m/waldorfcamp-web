@@ -20,7 +20,7 @@ end
 
 # Susy grids in Compass
 # First: gem install compass-susy-plugin
-# require 'susy'
+require 'susy'
 
 # Change Compass configuration
 compass_config do |config|

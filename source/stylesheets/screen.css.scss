@@ -1,6 +1,7 @@
 @import 'compass';
+@import 'susy';
 
-$site: 46.971em;
+$col-width: 4.236em;
 
 $text: lighten(black, 30%);
 
@@ -17,8 +18,7 @@ $link1: $color2;
 $link2: adjust-lightness($link1, -10%);
 
 body {
-  margin: 0;
-  padding: 0;
+  @include container;
   font: { family: $sans-serif; size: 16px; }
   margin-top: 1.416em;
   line-height: 1.618em;
@@ -51,23 +51,48 @@ a {
   @include link-colors($link1, $link2, $link1, $link1, $link2);
 }
 
-ul {
+nav {
+  @include full;
+  @include clearfix;
+  ol {
+    @include columns(8,$total-cols);
+    @include omega($total-cols);
+    @include clearfix;
+    @include no-bullets;
+    font: { weight: 300; }
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    li {
+      float: left;
+      margin-right: 1.387em;
+      &.current a { color: $color2; font-weight: 400; line-height: 1.618em; }
+      &:last-child { margin: 0; }
+    }
+  }
+  a {
+    @include link-colors($color1, $color2, $color2, $color1, $color2);
+    display: block;
+    padding: 0.618em; }
 }
 
-nav, header .inner, #main { width: $site; margin: 0 auto; }
-
 header {
-  background: $color3;
+  @include full;
   margin-bottom: 3.706em;
 }
 
 .inner {
+  @include full($total-cols);
   position: relative;
 }
 
 #logo, #tagline { margin: 0; }
 
 #logo {
+  @include full($total-cols);
+  padding: 0 90em;
+  margin: 0 -90em;
+  background: $color3;
   font: { family: $serif; size: 5.997em; weight: 400; }
   margin-bottom: 0;
   color: $color2;
@@ -78,33 +103,23 @@ header {
 }
 
 #tagline {
+  @include full($total-cols);
+  @include prefix(2,$total-cols);
   font: { size: 1em; weight: 300; }
   text-transform: uppercase;
   letter-spacing: 0.236em;
-  position: absolute;
-  top: 5.997em;
-  right: 11.089em;
+  // position: absolute;
+  // top: 5.997em;
+  // right: 11.089em;
   color: lighten($color2, 0%);
 }
 
-nav {
-  @include clearfix;
-  ol {
-    @include clearfix;
-    @include no-bullets;
-    font: { weight: 300; }
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-    margin-right: 5.997em;
-    float: right;
-  }
-  li {
-    float: left;
-    &.current a { color: $color2; font-weight: 400; line-height: 1.618em; }
-  }
-  a {
-    @include link-colors($color1, $color2, $color2, $color1, $color2);
-    display: block;
-    padding: 0.618em; }
+#main {
+  @include columns(9);
+  @include omega;
+}
+
+aside {
+  @include columns(3);
+  @include alpha;
 }
