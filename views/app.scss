@@ -108,13 +108,10 @@ header {
   font: { size: 1em; weight: 300; }
   text-transform: uppercase;
   letter-spacing: 0.236em;
-  // position: absolute;
-  // top: 5.997em;
-  // right: 11.089em;
   color: lighten($color2, 0%);
 }
 
-#main {
+[role='main'] {
   @include columns(9);
   @include omega;
 }

@@ -1,26 +1,26 @@
 [
   {
     "title": "Home",
-    "url": "/"
+    "route": "/"
   },
   {
     "title": "About",
-    "url": "/about.html"
+    "route": "/about"
   },
   {
     "title": "Location",
-    "url": "/location.html"
+    "route": "/location"
   },
   {
     "title": "Workshops",
-    "url": "/workshops.html"
+    "route": "/workshops"
   },
   {
     "title": "Gallery",
-    "url": "/gallery.html"
+    "route": "/gallery"
   },
   {
     "title": "Contact",
-    "url": "/contact.html"
+    "route": "/contact"
   }
 ]

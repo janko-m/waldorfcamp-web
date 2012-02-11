@@ -1,4 +1,8 @@
-require 'rubygems'
-require 'middleman'
+# Encoding.default_external = 'utf-8'
 
-run Middleman.server
+$:.unshift File.expand_path('..', __FILE__)
+
+ENV['TMPDIR'] = "/tmp" unless ENV['TMPDIR']
+
+require 'app'
+run Sinatra::Application

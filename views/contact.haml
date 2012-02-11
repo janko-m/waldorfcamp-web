@@ -1,11 +1,9 @@
----
-title: 'Contact'
----
+- @title = 'Contact'
 
 %section#contact
-
   %article
-    .img= image_tag 'helena.jpg'
+    .img
+      %img{src: '/images/helena.jpg'}
     .info
       :markdown
         # Helena Ivetić
@@ -13,9 +11,9 @@ title: 'Contact'
 
         - <helena.ivetic@waldorfcamp.net>
         - +385 98 98 08 631
-
   %article
-    .img= image_tag 'matija.jpg'
+    .img
+      %img{src: '/images/matija.jpg'}
     .info
       :markdown
         # Matija Marohnić
