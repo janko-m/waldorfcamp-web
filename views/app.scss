@@ -54,14 +54,14 @@ nav {
   @include full;
   @include clearfix;
   ol {
-    @include columns(8,$total-cols);
-    @include omega($total-cols);
-    @include clearfix;
-    @include no-bullets;
-    font: { weight: 300; }
-    text-transform: uppercase;
     margin: 0;
     padding: 0;
+    @include clearfix;
+    @include no-bullets;
+    @include full($total-cols);
+    @include pad(1,1,$total-cols);
+    font: { weight: 300; }
+    text-transform: uppercase;
     li {
       float: left;
       margin-right: 1.387em;
@@ -93,6 +93,7 @@ header {
   margin: 0 -90em;
   background: $color3;
   font: { size: 5.997em; weight: 700; }
+  text-align: center;
   margin-bottom: 0;
   color: $color2;
   a {
@@ -103,10 +104,9 @@ header {
 
 #tagline {
   @include full($total-cols);
-  @include prefix(2,$total-cols);
   font: { size: 1em; weight: 300; }
-  text-transform: uppercase;
-  letter-spacing: 0.236em;
+  text: { transform: uppercase; align: center; }
+  letter-spacing: 0.53em;
   color: lighten($color2, 0%);
 }
 
