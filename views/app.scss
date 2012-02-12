@@ -41,6 +41,7 @@ body {
   @include container;
   font: { family: $sans-serif; size: 16px; }
   margin-top: scale(2);
+  margin-bottom: scale(2);
   line-height: scale(2);
   color: $text;
 }
@@ -52,16 +53,17 @@ body {
 h1 {
   font: { size: scale(5); weight: 300; }
   line-height: scale();
-  margin-bottom: scale(-4);
+  margin: scale(-4) 0 scale(-8) 0;
 }
 
 h2 {
-  font: { size: scale(3); weight: 700; }
+  font: { size: scale(3); weight: 300; }
   margin: scale(-1) 0 scale(-2) 0;
 }
 
 h3 {
   font: { size: scale(1); weight: 400; }
+  letter-spacing: scale(-7);
   text-transform: uppercase;
   margin: scale(-1) 0 scale(-3) 0;
 }
