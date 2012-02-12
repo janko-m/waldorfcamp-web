@@ -111,8 +111,7 @@ header {
 }
 
 [role='main'] {
-  @include columns(9);
-  @include omega;
+  @include full;
 }
 
 aside {
