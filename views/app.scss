@@ -15,6 +15,12 @@ $desc: 0.875em 0.618em 0.541em 0.382em 0.334em 0.236em 0.207em 0.146em 0.128em 0
   }
 }
 
+@mixin unstyled-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 $total-cols: 10;
 $col-width: scale(6);
 
@@ -69,10 +75,8 @@ nav {
   @include full;
   @include clearfix;
   ol {
-    margin: 0;
-    padding: 0;
     @include clearfix;
-    @include no-bullets;
+    @include unstyled-list;
     @include full($total-cols);
     @include pad(1,1,$total-cols);
     font: { weight: 300; }
