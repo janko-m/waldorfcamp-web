@@ -5,7 +5,6 @@ $col-width: 4.236em;
 
 $text: lighten(black, 30%);
 
-$serif: 'Abril Fatface', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
 $sans-serif: Lato, 'Helveteica Neue', 'Helvetica', sans-serif;
 
 $color1: #FAE187;
@@ -93,7 +92,7 @@ header {
   padding: 0 90em;
   margin: 0 -90em;
   background: $color3;
-  font: { family: $serif; size: 5.997em; weight: 400; }
+  font: { size: 5.997em; weight: 700; }
   margin-bottom: 0;
   color: $color2;
   a {
