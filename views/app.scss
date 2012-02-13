@@ -164,3 +164,56 @@ aside {
   @include columns(3);
   @include alpha;
 }
+
+#location {
+  @include full($total-cols);
+  article {
+    @include columns(6, $total-cols);
+  }
+  iframe {
+    @include columns(4, $total-cols);
+    @include omega($total-cols);
+    margin-top: scale(2);
+    outline: 1px solid $color1;
+  }
+  small {
+    @include columns(4, $total-cols);
+    @include omega($total-cols);
+    margin-top: scale(-4);
+    text-align: center;
+  }
+}
+
+#gallery {
+  @include full($total-cols);
+  .nav {
+    $cols: 1;
+    @include unstyled-list;
+    @include clearfix;
+    @include columns($cols,$total-cols);
+    li { @include full($cols); margin-bottom: scale(1); }
+    h1 { font: { size: scale(2); } }
+  }
+  .photos {
+    $cols: 9;
+    @include unstyled-list;
+    @include clearfix;
+    @include columns($cols,$total-cols);
+    @include omega($total-cols);
+    li {
+      @include columns(3,$cols);
+      line-height: 0;
+      margin-bottom: $gutter-width;
+      &:nth-child(3n) { @include omega($cols); }
+    }
+  }
+}
+
+#contact {
+  @include full($total-cols);
+  article {
+    @include columns(5,$total-cols);
+    &:first-child { }
+    &:last-child { @include omega($total-cols); }
+  }
+}

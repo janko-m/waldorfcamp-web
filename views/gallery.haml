@@ -1,8 +1,10 @@
 - @title = 'Gallery'
 
-%section#gallery
-  - camps.each do |camp|
-    %article
+#gallery
+  %ol.nav
+    = list_of(camps) do |camp|
       %a{href: '#'}
         %h1= camp[:year]
-        %h2= camp[:location]
+  %ol.photos
+    = list_of(1..15) do |i|
+      %img{src: 'http://placehold.it/235x156&text=Photo'}
