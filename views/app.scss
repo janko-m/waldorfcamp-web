@@ -198,6 +198,10 @@ aside {
     left: -1 * ($col-width + $gutter-width);
     li { @include full($cols); margin-bottom: scale(1); }
     h1 { font: { size: scale(2); } }
+    li.current h1 a {
+      font-weight: 400;
+      color: $color1;
+    }
   }
   .photos {
     @include unstyled-list;

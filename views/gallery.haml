@@ -2,9 +2,10 @@
 
 #gallery
   %ol.nav
-    = list_of(camps) do |camp|
-      %a{href: '#'}
-        %h1= camp[:year]
+    - camps.each do |camp|
+      %li{class: (camp[:year]==2001 ? 'current' : nil)}
+        %h1
+          %a{href: '#'}= camp[:year]
   %ol.photos
     = list_of(1..15) do |i|
       %img{src: 'http://placehold.it/235x156&text=Photo'}
