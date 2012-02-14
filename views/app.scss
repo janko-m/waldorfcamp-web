@@ -89,7 +89,7 @@ h3 {
   letter-spacing: scale(-7);
   text-transform: uppercase;
   color: $h3;
-  margin: scale(-1) 0 scale(-3) 0;
+  margin: scale(-1) 0 scale(-6) 0;
 }
 
 a {
@@ -219,4 +219,5 @@ aside {
     &:first-child { }
     &:last-child { @include omega($total-cols); }
   }
+  p { margin-bottom: scale(-2); }
 }
