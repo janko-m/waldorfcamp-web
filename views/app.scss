@@ -189,25 +189,25 @@ aside {
 
 #gallery {
   @include full($total-cols);
+  position: relative;
+  $cols: 1;
   .nav {
-    $cols: 1;
     @include unstyled-list;
-    @include clearfix;
     @include columns($cols,$total-cols);
+    position: absolute;
+    left: -1 * ($col-width + $gutter-width);
     li { @include full($cols); margin-bottom: scale(1); }
     h1 { font: { size: scale(2); } }
   }
   .photos {
-    $cols: 9;
     @include unstyled-list;
     @include clearfix;
-    @include columns($cols,$total-cols);
-    @include omega($total-cols);
+    @include full($total-cols);
     li {
-      @include columns(3,$cols);
+      @include columns(2,$total-cols);
       line-height: 0;
       margin-bottom: $gutter-width;
-      &:nth-child(3n) { @include omega($cols); }
+      &:nth-child(5n) { @include omega($total-cols); }
     }
   }
 }
