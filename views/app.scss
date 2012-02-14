@@ -60,6 +60,7 @@ body {
   margin-bottom: scale(2);
   line-height: scale(2);
   color: $text;
+  overflow-y: scroll;
 }
 
 #{elements-of-type(block)} {
