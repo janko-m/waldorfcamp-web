@@ -107,12 +107,12 @@ nav {
     @include pad(1,1,$total-cols);
     font: { weight: 300; }
     text-transform: uppercase;
-    li {
-      float: left;
-      margin-right: scale(1);
-      &.current a { color: $current; font-weight: 400; line-height: scale(2); }
-      &:last-child { margin: 0; }
-    }
+  }
+  li {
+    float: left;
+    margin-right: scale(1);
+    &.current a { color: $current; font-weight: 400; line-height: scale(2); }
+    &:last-child { margin: 0; }
   }
   a {
     @include link-colors($nav1, $nav2, $nav2, $nav1, $nav2);
@@ -140,7 +140,6 @@ header {
   font: { size: scale(7); weight: 700; }
   text-align: center;
   margin-bottom: 0;
-  border-bottom: $logo-border;
   a {
     color: $logo;
     line-height: scale(-1);
@@ -153,6 +152,7 @@ header {
   font: { size: scale(); weight: 300; }
   text: { transform: uppercase; align: center; }
   letter-spacing: scale(-3);
+  border-top: $logo-border;
   color: $tagline;
   background: lighten($color3,25%);
 }
