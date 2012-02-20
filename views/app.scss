@@ -214,7 +214,7 @@ aside {
   }
   @each $workshop in yoga, painting, circus, singing {
     article.#{$workshop} .bg {
-      background: image-url('workshops/' + $workshop + '.jpg');
+      background: rgba(black,.3) image-url('workshops/' + $workshop + '.jpg');
     }
   }
 }
