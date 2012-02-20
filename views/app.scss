@@ -97,6 +97,10 @@ a {
   @include link-colors($link1, $link2, $link1, $link1, $link2);
 }
 
+img {
+  outline: 1px solid rgba(black,.3)
+}
+
 nav {
   @include full;
   @include clearfix;
@@ -205,8 +209,8 @@ aside {
   }
   .photos {
     @include unstyled-list;
-    @include clearfix;
     @include full($total-cols);
+    @include pie-clearfix;
     li {
       @include columns(2,$total-cols);
       line-height: 0;
