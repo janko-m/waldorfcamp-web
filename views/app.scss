@@ -103,7 +103,6 @@ img {
 
 nav {
   @include full;
-  @include clearfix;
   ol {
     @include clearfix;
     @include unstyled-list;
