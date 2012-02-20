@@ -223,13 +223,10 @@ aside {
 
 #gallery {
   @include full($total-cols);
-  position: relative;
   $cols: 1;
   .nav {
     @include unstyled-list;
     @include columns($cols,$total-cols);
-    position: absolute;
-    left: -1 * ($col-width + $gutter-width);
     li { @include full($cols); margin-bottom: scale(1); }
     h1 { font: { size: scale(2); } }
     li.current h1 a {
@@ -237,15 +234,17 @@ aside {
       color: $color1;
     }
   }
+  $cols: $total-cols - $cols;
   .photos {
     @include unstyled-list;
-    @include full($total-cols);
     @include pie-clearfix;
+    @include columns($cols,$total-cols);
+    @include omega($total-cols);
     li {
-      @include columns(2,$total-cols);
+      @include columns(3,$cols);
       line-height: 0;
       margin-bottom: $gutter-width;
-      &:nth-child(5n) { @include omega($total-cols); }
+      &:nth-child(3n) { @include omega($total-cols); }
     }
   }
 }
