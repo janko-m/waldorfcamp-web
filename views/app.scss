@@ -192,10 +192,12 @@ aside {
     display: block;
     padding: scale(-5);
     color: $color1;
+    outline: 1px solid rgba(black,.2);
     &:hover {
       color: white;
       @include text-shadow(rgba(black,.2) 1px 1px 0);
       text-decoration: none;
+      outline: none;
       .bg { @include opacity(1); }
     }
   }
