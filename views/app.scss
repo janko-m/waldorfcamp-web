@@ -43,9 +43,7 @@ $nav1: $color3;
 $nav2: $color2;
 
 $logo: $color1;
-$logo-bg: transparent;
 $logo-border: 1px solid $color2;
-$logo-width: 0;
 
 $tagline: $color2;
 
@@ -137,15 +135,13 @@ header {
 
 #logo {
   @include full($total-cols);
-  padding: 0 $logo-width;
-  margin: 0 (-$logo-width);
-  background: $logo-bg;
+  @include pad(1,1,$total-cols);
   font: { size: scale(7); weight: 700; }
   text-align: center;
   margin-bottom: 0;
   a {
     color: $logo;
-    line-height: scale(-1);
+    display: block;
     &:hover { text-decoration: none; }
   }
 }
