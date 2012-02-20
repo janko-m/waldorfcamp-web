@@ -2,6 +2,8 @@
 
 #workshops
   - workshops.each do |workshop|
-    %article
+    %article{class: workshop.downcase}
       %h1
-        %a{href: '#'}= workshop
+        %a{href: '#'}
+          %span= workshop
+          .bg
