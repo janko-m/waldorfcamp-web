@@ -13,6 +13,8 @@ set :database, "sqlite://development.db"
 
 set :js_assets, %w[zepto.min.js app.coffee]
 
+set :pages, %w[about location workshops gallery contact]
+
 get '/app.css' do
   sass :app
 end
@@ -21,22 +23,12 @@ get '/' do
   haml :index
 end
 
-get '/about' do
-  haml :about
-end
+settings.pages.each do |page|
+  get "/#{page}" do
+    haml page.to_sym
+  end
 
-get '/location' do
-  haml :location
-end
-
-get '/workshops' do
-  haml :workshops
-end
-
-get '/gallery' do
-  haml :gallery
-end
-
-get '/contact' do
-  haml :contact
+  get "/#{page}/:subpage" do
+    haml "#{page}/#{params[:subpage]}".to_sym
+  end
 end
