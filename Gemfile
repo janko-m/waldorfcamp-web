@@ -21,5 +21,4 @@ group :development, :test do
 end
 
 gem 'activesupport'
-gem 'redcarpet'
 gem 'yajl-ruby'
