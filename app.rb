@@ -1,13 +1,9 @@
 require 'sinatra'
-require 'sinatra/activerecord'
 require 'susy'
 
 # Personal requirings
-require 'db/models'
 require 'views/helpers'
 Dir['config/*.rb'].each { |config| require config }
-
-set :database, "sqlite://development.db"
 
 set :js_assets, %w[zepto.min.js app.coffee]
 
