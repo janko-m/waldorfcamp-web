@@ -2,7 +2,7 @@ source :rubygems
 
 gem 'sinatra'
 
-gem 'haml'
+gem 'slim'
 gem 'sass'
 gem 'compass', '~> 0.12.alpha'
 gem 'coffee-script'

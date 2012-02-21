@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'slim'
 require 'susy'
 
 require './views/helpers'
@@ -13,15 +14,15 @@ get '/app.css' do
 end
 
 get '/' do
-  haml :index
+  slim :index
 end
 
 settings.pages.each do |page|
   get "/#{page}" do
-    haml page.to_sym
+    slim page.to_sym
   end
 
   get "/#{page}/:subpage" do
-    haml "#{page}/#{params[:subpage]}".to_sym
+    slim "#{page}/#{params[:subpage]}".to_sym
   end
 end

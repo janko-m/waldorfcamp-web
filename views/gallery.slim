@@ -1,0 +1,11 @@
+- @title = 'Gallery'
+
+#gallery
+  ol.nav
+    - camps.each do |camp|
+      li[class=(camp[:year] == 2001 ? 'current' : nil)]
+        h1
+          a[href='#'] = camp[:year]
+  ol.photos
+    - (1..30).each do |i|
+      li: img[src='http://placehold.it/235x156&text=Photo']

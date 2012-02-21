@@ -1,0 +1,22 @@
+doctype html
+html[lang='en']
+  head
+    meta[charset='utf-8']
+    link[name='robots' content='noindex']
+    title == 'Waldorf Camp' + (@title ? " &middot; #{@title}" : "")
+    link[href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Abril+Fatface' rel='stylesheet' type='text/css']
+    link[rel='stylesheet' type='text/css' href='/app.css']
+    == javascript_includes
+  body
+    nav
+      ol
+        - navigation_pages.each do |page|
+          li[class=(current_page?(page) ? 'current' : nil)]
+            a[href=page[:route]] = page[:title]
+    header
+      hgroup
+        h1#logo
+          a[href='/'] Waldorf Camp
+        h2#tagline An Active and Dynamic Vacation
+    div[role='main']
+      == yield
