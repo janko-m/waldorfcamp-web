@@ -1,6 +1,5 @@
-$:.unshift File.expand_path('..', __FILE__)
 
 ENV['TMPDIR'] = "/tmp" unless ENV['TMPDIR']
 
-require 'app'
+require './app'
 run Sinatra::Application
