@@ -4,6 +4,6 @@
   - workshops.each do |workshop|
     article[class=workshop.downcase]
       h1
-        a[href='#']
+        a[href='/workshops/#{workshop.downcase}']
           span= workshop
           .bg
