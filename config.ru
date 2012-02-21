@@ -1,5 +1,5 @@
-
-ENV['TMPDIR'] = "/tmp" unless ENV['TMPDIR']
+# Ubuntu fix
+ENV['TMPDIR'] ||= "/tmp"
 
 require './app'
 run Sinatra::Application
