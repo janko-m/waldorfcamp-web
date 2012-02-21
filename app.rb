@@ -2,8 +2,6 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'susy'
 
-$:.unshift settings.root if $:.first != settings.root
-
 # Personal requirings
 require 'db/models'
 require 'views/helpers'
