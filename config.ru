@@ -1,5 +1,5 @@
 # Ubuntu fix
 ENV['TMPDIR'] ||= "/tmp"
 
-require './app'
+require_relative './app'
 run Sinatra::Application
