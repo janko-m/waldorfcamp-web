@@ -2,8 +2,9 @@ require 'sinatra'
 require 'slim'
 require 'susy'
 
-require_relative './views/helpers'
-Dir['./config/*.rb'].each { |config| require_relative config }
+Dir['./config/*.rb'].each { |config| require config }
+Dir['./lib/*.rb'].each { |lib| require lib }
+require './views/helpers'
 
 set :js_assets, %w[zepto.min.js app.coffee]
 

@@ -2,6 +2,8 @@ require 'active_support/core_ext/hash/keys'
 require 'yajl'
 
 helpers do
+  include Sinatra::Partials
+
   def navigation_pages
     json_file = File.open("#{settings.root}/data/navigation.json")
     Yajl::Parser.new.parse(json_file).collect { |hash| hash.symbolize_keys }
