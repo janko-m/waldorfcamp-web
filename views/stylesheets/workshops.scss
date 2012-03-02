@@ -31,7 +31,7 @@
   }
   @each $workshop in yoga, painting, circus, singing {
     li.#{$workshop} .bg {
-      background: rgba(black,.3) image-url('workshops/' + $workshop + '.jpg') no-repeat 0 0;
+      background: rgba(black,.3) image-url('workshops/navigation/' + $workshop + '.jpg') no-repeat 0 0;
     }
   }
 }
