@@ -1,5 +1,6 @@
 #workshops {
   @include inline-block-list;
+  margin-bottom: scale();
   li { margin-left: 2px; }
   h1 {
     position: relative;
