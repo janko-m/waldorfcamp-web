@@ -1,0 +1,27 @@
+#gallery {
+  @include full($total-cols);
+  $cols: 1;
+  .nav {
+    @include unstyled-list;
+    @include columns($cols,$total-cols);
+    li { @include full($cols); margin-bottom: scale(1); }
+    h1 { font: { size: scale(2); } }
+    li.current h1 a {
+      font-weight: 400;
+      color: $color1;
+    }
+  }
+  $cols: $total-cols - $cols;
+  .photos {
+    @include unstyled-list;
+    @include pie-clearfix;
+    @include columns($cols,$total-cols);
+    @include omega($total-cols);
+    li {
+      @include columns(3,$cols);
+      line-height: 0;
+      margin-bottom: $gutter-width;
+      &:nth-child(3n) { @include omega($total-cols); }
+    }
+  }
+}
