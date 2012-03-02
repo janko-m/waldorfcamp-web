@@ -11,12 +11,12 @@
     padding: scale(-4) scale(0);
     color: $color1;
     color: rgba(black,.35);
-    &:hover {
-      color: white;
-      @include text-shadow(rgba(black,.3) 1px 1px 0);
-      text-decoration: none;
-      .bg { @include opacity(1); }
-    }
+  }
+  li.current a, a:hover {
+    color: white;
+    @include text-shadow(rgba(black,.3) 1px 1px 0);
+    text-decoration: none;
+    .bg { @include opacity(1); }
   }
   span {
     position: relative;

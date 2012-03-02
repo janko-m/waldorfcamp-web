@@ -1,12 +1,6 @@
 - @title = 'Workshops'
 
-ul#workshops
-  - workshops.each do |workshop|
-    li[class=workshop.downcase]
-      h1
-        a[href='/workshops/#{workshop.downcase}']
-          span= workshop
-          .bg
+== partial "partials/workshops_nav".to_sym
 
 article
   markdown:

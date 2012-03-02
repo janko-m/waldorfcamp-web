@@ -1,0 +1,7 @@
+ul#workshops
+  - workshops.each do |workshop|
+    li[class="#{workshop.downcase}#{workshop == @title ? " current" : ""}"]
+      h1
+        a[href='/workshops/#{workshop.downcase}']
+          span= workshop
+          .bg
