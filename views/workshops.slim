@@ -1,8 +1,8 @@
 - @title = 'Workshops'
 
-#workshops
+ul#workshops
   - workshops.each do |workshop|
-    article[class=workshop.downcase]
+    li[class=workshop.downcase]
       h1
         a[href='/workshops/#{workshop.downcase}']
           span= workshop

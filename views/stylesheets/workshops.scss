@@ -1,15 +1,19 @@
 #workshops {
-  h1 { position: relative; }
+  @include inline-block-list;
+  li { margin-left: 2px; }
+  h1 {
+    position: relative;
+    font-size: scale(4);
+  }
   a {
     display: block;
-    padding: scale(-5);
+    padding: scale(-4) scale(0);
     color: $color1;
-    outline: 1px solid rgba(black,.2);
+    color: rgba(black,.35);
     &:hover {
       color: white;
-      @include text-shadow(rgba(black,.2) 1px 1px 0);
+      @include text-shadow(rgba(black,.3) 1px 1px 0);
       text-decoration: none;
-      outline: none;
       .bg { @include opacity(1); }
     }
   }
@@ -25,8 +29,8 @@
     @include opacity(.2);
   }
   @each $workshop in yoga, painting, circus, singing {
-    article.#{$workshop} .bg {
-      background: rgba(black,.3) image-url('workshops/' + $workshop + '.jpg');
+    li.#{$workshop} .bg {
+      background: rgba(black,.3) image-url('workshops/' + $workshop + '.jpg') no-repeat 0 0;
     }
   }
 }
