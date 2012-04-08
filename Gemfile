@@ -21,3 +21,5 @@ end
 gem 'activesupport'
 gem 'redcarpet'
 gem 'yajl-ruby'
+
+gem 'faraday-stack'
