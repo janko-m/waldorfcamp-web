@@ -1,0 +1,6 @@
+%ul#workshops
+  - workshops.each do |workshop|
+    %li{:class => "#{workshop.downcase}#{workshop == @title ? ' current' : ''}"}
+      %a{:href => "/workshops/#{workshop.downcase}"}
+        %span= workshop
+        .bg

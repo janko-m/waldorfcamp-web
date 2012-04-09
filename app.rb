@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'slim'
 require 'susy'
 
 Dir['./config/*.rb'].each { |config| require config }
@@ -15,15 +14,15 @@ get '/app.css' do
 end
 
 get '/' do
-  slim :index
+  haml :index
 end
 
 settings.pages.each do |page|
   get "/#{page}" do
-    slim page.to_sym
+    haml page.to_sym
   end
 
   get "/#{page}/:subpage" do
-    slim "#{page}/#{params[:subpage]}".to_sym
+    haml "#{page}/#{params[:subpage]}".to_sym
   end
 end
