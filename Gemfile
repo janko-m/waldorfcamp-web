@@ -12,6 +12,8 @@ gem 'compass-susy-plugin'
 group :development do
   gem 'thin'
   gem 'shotgun'
+  gem 'foreman'
+  gem 'guard-livereload'
 end
 
 group :development, :test do
