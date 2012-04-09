@@ -1,15 +1,16 @@
 #workshops {
   @include inline-block-list;
-  margin-bottom: scale();
-  li { margin-left: 2px; }
-  h1 {
-    position: relative;
-    font-size: scale(4);
+  font-size: 0;
+  li {
+    margin: 0 0 scale() 2px;
+    font-size: 16px;
   }
   a {
+    position: relative;
     display: block;
     padding: scale(-4) scale(0);
-    color: $color1;
+    font: { size: scale(4); weight: 300; }
+    line-height: 1em;
     color: rgba(black,.35);
   }
   li.current a, a:hover {
