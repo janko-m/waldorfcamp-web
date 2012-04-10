@@ -2,10 +2,10 @@
 
 #gallery
   %ol.nav
-    /* - camps.each do |camp| */
-    /*   li[class=(camp[:year] == 2001 ? 'current' : nil)] */
-    /*     h1 */
-    /*       a[href='#'] = camp[:year] */
+  -#   - camps.each do |camp|
+  -#     %li{:class => camp[:year] == 2001 ? 'current' : nil}
+  -#       %h1
+  -#         %a{:href => '#'}= camp[:year]
   %ol.photos
     - photos = Flickr.photos_from_set(72157629770857071).map(&:medium500)
     = list_of(photos) do |photo|
