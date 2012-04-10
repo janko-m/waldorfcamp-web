@@ -19,6 +19,8 @@
     @include omega($total-cols);
     li {
       @include columns(3,$cols);
+      overflow: hidden;
+      height: scale(10);
       line-height: 0;
       margin-bottom: $gutter-width;
       &:nth-child(3n) { @include omega($total-cols); }

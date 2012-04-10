@@ -7,7 +7,7 @@
     /*     h1 */
     /*       a[href='#'] = camp[:year] */
   %ol.photos
-    - photos = Flickr.photos_from_set(72157629770857071).map(&:small)
+    - photos = Flickr.photos_from_set(72157629770857071).map(&:medium500)
     = list_of(photos) do |photo|
       %a{:href => photo.largest.url}
         %img{:src => photo.url}
