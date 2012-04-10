@@ -5,7 +5,7 @@ Dir['./config/*.rb'].each { |config| require config }
 Dir['./lib/*.rb'].each { |lib| require lib }
 require './views/helpers'
 
-set :js_assets, %w[zepto.min.js app.coffee]
+set :js_assets, %w[jquery.mousewheel-3.0.6.pack.js jquery.fancybox.pack.js app.coffee]
 
 set :pages, %w[about location workshops gallery contact]
 

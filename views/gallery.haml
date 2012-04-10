@@ -9,5 +9,5 @@
   %ol.photos
     - photos = Flickr.photos_from_set(72157629770857071).map(&:medium500)
     = list_of(photos) do |photo|
-      %a{:href => photo.largest.url}
+      %a{:href => photo.largest.url, :rel => 'gallery'}
         %img{:src => photo.url}
