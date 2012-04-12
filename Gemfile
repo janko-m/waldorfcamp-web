@@ -1,6 +1,7 @@
 source :rubygems
 
 gem 'sinatra'
+gem 'thin'
 
 gem 'haml'
 gem 'sass'
@@ -10,7 +11,6 @@ gem 'uglifier'
 gem 'compass-susy-plugin'
 
 group :development do
-  gem 'thin'
   gem 'shotgun'
   gem 'foreman'
   gem 'guard-livereload'
