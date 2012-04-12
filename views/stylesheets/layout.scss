@@ -109,6 +109,7 @@ header {
 
 [role='main'] {
   @include full;
+  @include clearfix;
 }
 
 aside {
