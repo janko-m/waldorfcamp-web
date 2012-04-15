@@ -1,5 +1,11 @@
 #gallery {
   @include full($total-cols);
+  @include clearfix;
+  h1 {
+    @include full($total-cols);
+    @include prefix(1, $total-cols);
+    margin-bottom: scale(-4);
+  }
   $cols: 1;
   .nav {
     @include unstyled-list;
