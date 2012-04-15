@@ -10,7 +10,7 @@ helpers do
   end
 
   def current_page?(page)
-    request.path_info[/^\/[^\/]+/] == page[:route]
+    request.path_info[/^\/[^\/]*/] == page[:route]
   end
 
   def workshops
