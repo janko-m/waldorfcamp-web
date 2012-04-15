@@ -1,4 +1,4 @@
 jQuery ->
-  $('#gallery a').fancybox
+  $('#gallery .photos a').fancybox
     nextEffect: 'fade'
     prevEffect: 'fade'
