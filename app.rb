@@ -1,11 +1,17 @@
 require 'sinatra'
 require 'susy'
+require 'haml'
 
-Dir['./config/*.rb'].each { |config| require config }
-Dir['./lib/*.rb'].each { |lib| require lib }
-require './views/helpers'
+require 'config/compass_config'
+require 'config/custom_logger'
+require 'config/haml_config'
+require 'config/sinatra_boilerplate'
 
 set :js_assets, %w[jquery.mousewheel-3.0.6.pack.js jquery.fancybox.pack.js app.coffee]
+require 'lib/flickr'
+require 'lib/partials'
+
+require 'views/helpers'
 
 set :pages, %w[about location workshops gallery contact]
 
