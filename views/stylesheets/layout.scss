@@ -44,9 +44,11 @@ a {
 
 img {
   max-width: 100%;
+  outline: 10px solid white;
+  @include box-shadow(rgba(black, .4) 0 0 0 11px);
   article & {
     float: right;
-    margin-left: scale();
+    margin-left: scale(2);
   }
 }
 

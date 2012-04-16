@@ -8,6 +8,9 @@
       @include omega($total-cols);
     }
   }
-  img { float: none; }
+  img {
+    float: none;
+    margin-left: scale(-1);
+  }
   p { margin-bottom: scale(-2); }
 }
