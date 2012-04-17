@@ -43,6 +43,6 @@ get '/gallery/:camp' do
   haml :gallery
 end
 
-error do
-  haml :error
+error Flickr::Error do
+  haml :flickr_error
 end
