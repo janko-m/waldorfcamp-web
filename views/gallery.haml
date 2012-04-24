@@ -12,3 +12,5 @@
     = list_of(@current_camp.photos.map { |photo| photo.medium(500) }) do |photo|
       %a{:href => photo.largest.source_url, :rel => 'gallery'}
         %img{:src => photo.source_url}
+
+  %a{:href => "/gallery/delete_cache"} Delete cache

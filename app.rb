@@ -35,6 +35,11 @@ get '/gallery' do
   redirect '/gallery/2001-badija'
 end
 
+get '/gallery/delete_cache' do
+  FileUtils.remove_dir(File.join(ENV['TMPDIR'], 'waldorf-cache'))
+  redirect back
+end
+
 get '/gallery/:camp' do
   @camps = Flickr.sets_from_user('66667715@N07')
   @camps.sort_by! { |camp| camp.title[/\d{4}$/] }
