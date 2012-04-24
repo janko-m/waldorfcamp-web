@@ -32,4 +32,14 @@
       &:nth-child(3n) { @include omega($total-cols); }
     }
   }
+  .delete-cache {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba($color1, .05);
+    &:hover { text-decoration: none; }
+  }
 }
