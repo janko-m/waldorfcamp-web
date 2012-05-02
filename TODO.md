@@ -1,0 +1,1 @@
+- vlastiti API key i shared secret za "waldorfcamp" Flickr account

@@ -1,27 +1,33 @@
 source :rubygems
 
-gem 'sinatra'
-gem 'thin'
+gem "thin"
+gem "rails", "3.2.3"
 
-gem 'haml'
-gem 'sass'
-gem 'compass'
-gem 'coffee-script'
-gem 'uglifier'
-gem 'compass-susy-plugin'
+group :assets do
+  gem "sass-rails"
+  gem "coffee-rails"
+  gem "uglifier"
+  gem "compass-rails"
+  gem "compass-susy-plugin", :require => "susy"
+  gem "jquery-rails"
+end
+
+gem "haml-rails"
+gem "redcarpet"
 
 group :development do
-  gem 'shotgun'
-  gem 'foreman'
-  gem 'guard-livereload'
-end
-
-group :development, :test do
+  gem "sqlite3"
   gem "debugger"
+  gem "foreman"
+  gem "guard-livereload"
 end
 
-gem 'activesupport'
-gem 'redcarpet'
-gem 'yajl-ruby'
+group :production do
+  gem "pg"
+end
 
-gem 'faraday-stack'
+group :test do
+  gem "turn", :require => false
+end
+
+gem "flickrie"

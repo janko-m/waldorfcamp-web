@@ -1,0 +1,49 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %title Waldorf Camp &middot; #{@title}
+    %link{:href => 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Abril+Fatface', :rel => 'stylesheet', :type => 'text/css'}
+    %script{:src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
+    %meta{:charset => "utf-8"}
+    %link{:rel => "authors", :href => "humans.txt"}
+    = favicon_link_tag
+    = stylesheet_link_tag "application", "jquery.fancybox"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %nav
+      %ol
+        - navigation_pages.each do |page|
+          %li{:class => current_page?(:action => page.action) && 'current'}
+            = link_to page.title, :action => page.action
+    %header
+      %hgroup
+        %h1#logo
+          = link_to "Waldorf Camp", index_path
+        %h2#tagline An Active and Dynamic Vacation
+    %div{:role => 'main'}
+      = yield
+
+-# !!!
+-# %html{:lang => 'en'}
+-#   %head
+-#     %meta{:charset => 'utf-8'}
+-#     %title Waldorf Camp &middot; #{@title}
+-#     %link{:href => 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Abril+Fatface', :rel => 'stylesheet', :type => 'text/css'}
+-#     %link{:rel => 'stylesheet', :type => 'text/css', :href => '/stylesheets/app.css'}
+-#     %link{:rel => 'stylesheet', :type => 'text/css', :href => '/jquery.fancybox.css'}
+-#     %script{:src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
+-#     = javascript_includes
+-#   %body
+-#     %nav
+-#       %ol
+-#         - navigation_pages.each do |page|
+-#           %li{:class => current_page?(page) && 'current'}
+-#             %a{:href => page[:route]}= page[:title]
+-#     %header
+-#       %hgroup
+-#         %h1#logo
+-#           %a{:href => '/'} Waldorf Camp
+-#         %h2#tagline An Active and Dynamic Vacation
+-#     %div{:role => 'main'}
+-#       = yield

@@ -1,0 +1,6 @@
+- @title = params[:workshop].capitalize
+
+= render :partial => "workshops_nav"
+
+%article.workshop
+  = render_markdown(workshop_description(params[:workshop]))

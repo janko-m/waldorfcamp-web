@@ -1,9 +1,4 @@
-# Ubuntu fix
-ENV['TMPDIR'] ||= "/tmp"
+# This file is used by Rack-based servers to start the application.
 
-['.', 'lib'].each do |folder|
-  $:.unshift(File.expand_path(folder, File.dirname(__FILE__)))
-end
-
-require './app'
-run Sinatra::Application
+require ::File.expand_path('../config/environment',  __FILE__)
+run WaldorfCamp::Application
