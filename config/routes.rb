@@ -7,10 +7,9 @@ WaldorfCamp::Application.routes.draw do
   get "/contact", :to => "pages#contact"
   get "/workshops", :to => "pages#workshops"
   get "/workshops/:workshop", :to => "pages#workshop"
-  get "/gallery", :to => "pages#gallery"
-  get "/gallery/:camp", :to => "pages#gallery", :as => :gallery
 
-  match "/gallery/:camp/expire_cache" => "pages#expire_camp_cache"
+  match "/gallery/(:camp)/expire_cache" => "pages#expire_camp_cache"
+  get "/gallery/(:camp)", :to => "pages#gallery", :as => :gallery
 
   match "/404", :to => "errors#not_found"
   match "/500", :to => "errors#internal_server_error"
