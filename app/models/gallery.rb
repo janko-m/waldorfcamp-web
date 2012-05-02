@@ -6,7 +6,7 @@ class Gallery
   def self.camps
     @camps ||= Flickrie.sets_from_user(USER_NSID).
       sort_by do |set|
-        island, year = parse_set_title(set.title)
+        year, island = parse_set_title(set.title)
         year
       end
   end
@@ -29,6 +29,7 @@ class Gallery
   end
 
   def self.parse_set_title(set_title)
-    set_title.split(', ')
+    year, island = set_title.split(', ')
+    [year.to_i, island]
   end
 end
