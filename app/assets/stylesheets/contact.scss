@@ -1,11 +1,10 @@
 #contact {
-  @include full($total-cols);
   article {
-    @include columns(4,$total-cols);
+    @include span-columns(4);
     &:first-child { }
     &:last-child {
-      @include pad(1,1,$total-cols);
-      @include omega($total-cols);
+      @include pad(1,1);
+      @include omega;
     }
   }
   img {

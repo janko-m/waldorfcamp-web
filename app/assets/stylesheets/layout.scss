@@ -54,12 +54,10 @@ img {
 }
 
 nav {
-  @include full;
   ol {
     @include clearfix;
     @include unstyled-list;
-    @include full($total-cols);
-    @include pad(1,1,$total-cols);
+    @include pad(1,1);
     font: { weight: 300; }
     text-transform: uppercase;
   }
@@ -76,20 +74,17 @@ nav {
 }
 
 header {
-  @include full;
   margin-bottom: scale(5);
 }
 
 .hgroup {
-  @include full($total-cols);
   position: relative;
 }
 
 #logo, #tagline { margin: 0; }
 
 #logo {
-  @include full($total-cols);
-  @include pad(1,1,$total-cols);
+  @include pad(1,1);
   font: { size: scale(7); weight: 700; }
   text-align: center;
   margin-bottom: 0;
@@ -101,7 +96,6 @@ header {
 }
 
 #tagline {
-  @include full($total-cols);
   font: { size: scale(); weight: 300; }
   text: { transform: uppercase; align: center; }
   letter-spacing: scale(-3);
@@ -111,11 +105,9 @@ header {
 }
 
 [role='main'] {
-  @include full;
   @include pie-clearfix;
 }
 
 aside {
-  @include columns(3);
-  @include alpha;
+  @include span-columns(3);
 }

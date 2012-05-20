@@ -1,20 +1,14 @@
 #location {
-  @include full($total-cols);
   $cols: 4;
   article {
-    @include columns(6, $total-cols);
+    @include span-columns(6);
   }
   .map {
-    @include columns($cols, $total-cols);
-    @include omega($total-cols);
+    @include span-columns($cols omega);
     margin-top: scale(2);
   }
   iframe {
-    @include full($cols);
     width: 100%;
     outline: 1px solid $color1;
-  }
-  small {
-    @include full($cols);
   }
 }
