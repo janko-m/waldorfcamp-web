@@ -22,10 +22,6 @@ group :development do
   gem "guard-livereload"
 end
 
-group :production do
-  gem "pg"
-end
-
 group :test do
   gem "turn", :require => false
 end
