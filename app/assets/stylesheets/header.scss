@@ -1,0 +1,52 @@
+#header {
+  @include span-columns($main omega);
+  @include suffix($main-suffix);
+  @include rhythm(1, 0, 0, 1.5);
+  clear: right;
+}
+
+#logo, #tagline {
+  font: {
+    family: $display;
+    weight: normal;
+  }
+}
+
+#logo {
+  $font-size: 112px;
+  @include adjust-font-size-to($font-size, 3.5);
+  @include trailer(0, $font-size);
+  a:hover { text-decoration: none; }
+}
+
+#tagline {
+  $font-size: 20px;
+  @include adjust-font-size-to($font-size);
+  @include trailer(0, $font-size);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: lighten($text, 30%);
+}
+
+nav.secondary {
+  $font-size: 24px;
+  @include adjust-font-size-to($font-size, 2);
+  position: relative;
+  left: - gutter($main);
+  text-transform: uppercase;
+  ol, ul {
+    @include horizontal-list(0);
+    li { margin: 0 0 1px 1px; }
+  }
+  a {
+    display: block;
+    padding: 0 rhythm(2.5, $font-size);
+    background: rgba(black, .05);
+    &:hover {
+      text-decoration: none;
+    }
+    &:hover, &.active {
+      background: rgba(black, .1);
+    }
+  }
+}

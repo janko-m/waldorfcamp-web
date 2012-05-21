@@ -1,12 +1,13 @@
 - @title = 'Gallery'
 
-#gallery
-  %h1= @current_camp.title
-  %ol.nav
-    - @camps.each do |camp|
+%nav.secondary
+  %ol
+    = list_of @camps do |camp|
       - year, island = camp.title.split(', ')
-      %li{:class => camp.title == @current_camp.title && 'current'}
-        %h1= link_to year, gallery_path(:camp => "#{year}-#{island.downcase}")
+      = link_to year, gallery_path(:camp => "#{year}-#{island.downcase}"), :class => camp.title == @current_camp.title && 'active'
+
+%article
+  %h1= @current_camp.title
   %ol.photos
     = list_of @photos do |photo|
       = link_to image_tag(photo.source_url), photo.largest.source_url, :rel => 'gallery'

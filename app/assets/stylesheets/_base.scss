@@ -1,49 +1,26 @@
-$asc: 1.416em 1.618em 2.291em 2.618em 3.706em 4.236em 5.997em 6.854em 9.703em 11.089em 15.699em 17.942em 25.401em 29.03em 41.099em 46.971em 66.498em;
-$ideal: 1em;
-$desc: 0.875em 0.618em 0.541em 0.382em 0.334em 0.236em 0.207em 0.146em 0.128em 0.09em 0.079em;
+$total-columns: 24;
+$gutter-width: 2em;
+$grid-padding: 0;
+$container-width: 100%;
 
-@function scale($i: 0) {
-  @if $i==0 {
-    @return $ideal;
-  } @else if $i>0 {
-    @return nth($asc, $i);
-  } @else {
-    @return nth($desc, -$i);
-  }
-}
+$sidebar: 4;
+$main-suffix: 5;
+$main: $total-columns - $sidebar - $main-suffix;
+
+$base-font-size: 18px;
+$base-line-height: 30px;
+
+$text: lighten(black, 30%);
+
+$link1: rgba(black, .6);
+$link2: rgba(black, .75);
+
+$body: 'Gentium Basic', Georgia, serif;
+$heading: $body;
+$display: 'Love Ya Like A Sister', sans-serif;
 
 @mixin unstyled-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
-$total-columns: 10;
-$column-width: scale(6);
-
-$text: lighten(black, 30%);
-
-$sans-serif: Lato, 'Helveteica Neue', 'Helvetica', sans-serif;
-
-$color1: #229396;
-$color2: #8BA88F;
-$color3: #C7C5A7;
-$color4: #F0DFD0;
-$color5: #F23C3C;
-
-$link1: $color2;
-$link2: $color1;
-
-$current: $color1;
-
-$nav1: $color3;
-$nav2: $color2;
-
-$logo: $color1;
-$logo-border: 1px solid $color2;
-
-$tagline: $color2;
-
-$h1: $color1;
-$h2: $color1;
-$h3: $color2;

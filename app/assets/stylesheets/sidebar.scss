@@ -1,0 +1,33 @@
+nav.primary {
+  $font-size: 24px;
+  @include span-columns($sidebar);
+  @include stretch-y;
+  @include adjust-font-size-to($font-size);
+  @include padding-leader(7, $font-size);
+  @include box-sizing(border-box);
+  min-height: 100%;
+  background: rgba(black, .8);
+  font-family: $display;
+  text-align: right;
+  color: white;
+  ol {
+    @include unstyled-list;
+  }
+  a, .active {
+    display: block;
+    padding: rhythm(1, $font-size);
+  }
+  a {
+    $color1: rgba(white, .5);
+    $color2: white;
+    @include link-colors($color1, $color2, $color2, $color1, $color2);
+    &:hover {
+      background: rgba(white, .1);
+      text-decoration: none;
+    }
+  }
+  .active {
+    background: white;
+    color: $text;
+  }
+}

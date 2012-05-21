@@ -1,14 +1,12 @@
 #location {
-  $cols: 4;
   article {
-    @include span-columns(6);
-  }
-  .map {
-    @include span-columns($cols omega);
-    margin-top: scale(2);
-  }
-  iframe {
-    width: 100%;
-    outline: 1px solid $color1;
+    $cols: round($main/2);
+    p {
+      @include span-columns($cols, $main);
+    }
+    $cols: $main - $cols;
+    iframe {
+      @include span-columns($cols omega, $main);
+    }
   }
 }
