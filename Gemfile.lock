@@ -67,7 +67,7 @@ GEM
     faraday_middleware (0.8.7)
       faraday (>= 0.7.4, < 0.9)
     ffi (1.0.11)
-    flickrie (1.0.2)
+    flickrie (1.1.2)
       faraday (>= 0.7.6, < 0.9)
       faraday_middleware (>= 0.8.7, < 0.9)
       multi_xml (~> 0.4)
