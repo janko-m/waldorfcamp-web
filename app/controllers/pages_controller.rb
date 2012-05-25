@@ -22,7 +22,7 @@ class PagesController < ApplicationController
     @current_camp = Gallery.current_camp(params[:camp])
     @photos = Gallery.photos_from_camp(@current_camp)
   end
-  caches_page :gallery
+  # caches_page :gallery
 
   def expire_camp_cache
     expire_page gallery_path(:camp => params[:camp])
