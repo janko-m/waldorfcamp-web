@@ -1,9 +1,11 @@
 - @title = 'Workshops'
 
-= render :partial => "workshops_nav"
-
 %article
   :markdown
     # Workshops
 
     These are the workshops which have been held regularly since the beginning of the camp. So, besides these, we also had workshops for drama, archery, folk dances, drumming... you name it!
+
+  %ul
+    = list_of workshops do |workshop|
+      = link_to workshop, "/workshops/#{workshop.downcase}", :class => "#{workshop.downcase}#{workshop == @title ? ' active' : ''}"

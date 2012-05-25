@@ -3,17 +3,20 @@ $gutter-width: 2em;
 $grid-padding: 0;
 $container-width: 100%;
 
-$sidebar: 4;
-$main-suffix: 5;
-$main: $total-columns - $sidebar - $main-suffix;
+$nav-primary: 3;
+$nav-secondary: 3;
+$header: $total-columns - $nav-secondary;
+$main: $total-columns - $nav-primary - $nav-secondary;
 
-$base-font-size: 18px;
+$base-font-size: 20px;
 $base-line-height: 30px;
+
+$colors: #B52C38 #EBD1B0 #536682 #D9964B #DE6846;
 
 $text: lighten(black, 30%);
 
-$link1: rgba(black, .6);
-$link2: rgba(black, .75);
+$link1: lighten(nth($colors, 3), 10%);
+$link2: nth($colors, 3);
 
 $body: 'Gentium Basic', Georgia, serif;
 $heading: $body;

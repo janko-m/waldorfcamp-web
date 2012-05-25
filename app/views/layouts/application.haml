@@ -11,16 +11,19 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body{:id => @title.downcase}
-    %header#header
-      %hgroup
-        %h1#logo= link_to "Waldorf Camp", index_path
-        %h2#tagline An Active and Dynamic Vacation
-
     %nav.primary
       %ol
         = list_of navigation_pages do |page|
           = link_to_unless_current page.title, :action => page.action do
             %span.active= page.title
+
+    %nav.secondary
+      = content_for :navigation
+
+    %header#header
+      %hgroup
+        %h1#logo= link_to "Waldorf Camp", index_path
+        %h2#tagline An Active and Dynamic Vacation
 
     %div{:role => 'main'}
       = yield

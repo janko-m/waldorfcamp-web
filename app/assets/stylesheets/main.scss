@@ -1,5 +1,4 @@
 [role='main'] {
-  @include span-columns($main omega);
-  @include suffix($main-suffix);
-  clear: right;
+  @include span-columns($main);
+  @include prefix($nav-primary);
 }

@@ -1,33 +1,70 @@
-nav.primary {
-  $font-size: 24px;
-  @include span-columns($sidebar);
-  @include stretch-y;
+$font-size: 24px;
+nav {
   @include adjust-font-size-to($font-size);
-  @include padding-leader(7, $font-size);
   @include box-sizing(border-box);
-  min-height: 100%;
-  background: rgba(black, .8);
+  a, .active { display: block; }
+  ol, ul { @include unstyled-list; }
+}
+
+nav.primary {
+  $background: nth($colors, 3);
+  $color1: $background;
+  $color2: lighten($color1, 5%);
+  @include stretch-y;
+  @include span-columns($nav-primary);
+  @include padding-leader(7, $font-size);
+  @include text-shadow(rgba(black, .5) 1px 1px 1px);
+  @include background(linear-gradient(
+    top left,
+    $color1 25%,
+    $color2 25%,
+    $color2 50%,
+    $color1 50%,
+    $color1 75%,
+    $color2 75%
+  ));
+  @include background-size(4px 4px);
+  border-right: 1px solid darken(nth($colors, 3), 10%);
   font-family: $display;
   text-align: right;
   color: white;
-  ol {
-    @include unstyled-list;
-  }
-  a, .active {
-    display: block;
-    padding: rhythm(1, $font-size);
-  }
+  a, .active { padding: rhythm(1, $font-size); }
   a {
-    $color1: rgba(white, .5);
+    $color1: rgba(white, .75);
     $color2: white;
     @include link-colors($color1, $color2, $color2, $color1, $color2);
     &:hover {
       background: rgba(white, .1);
-      text-decoration: none;
+      border: 0;
+    }
+  }
+  .active { background: rgba(white, .2); }
+}
+
+nav.secondary {
+  $background: nth($colors, 4);
+  @include stretch-y;
+  @include span-columns($nav-secondary omega);
+  @include padding-leader(11, $font-size);
+  right: 0;
+  color: black;
+  a, .active {
+    padding: rhythm(.75, $font-size);
+    outline: 1px solid white;
+  }
+  a {
+    $color1: rgba(black, .5);
+    $color2: rgba(black, .75);
+    @include link-colors($color1, $color2, $color2, $color1, $color2);
+    background: rgba($background, .1);
+    &:hover {
+      background: rgba($background, .2);
+      border: 0;
     }
   }
   .active {
-    background: white;
-    color: $text;
+    background: rgba($background, .2);
+    @include apply-side-rhythm-border(left, 3px, .75);
+    border-left-color: $background;
   }
 }

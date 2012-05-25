@@ -1,8 +1,16 @@
 #header {
-  @include span-columns($main omega);
-  @include suffix($main-suffix);
-  @include rhythm(1, 0, 0, 1.5);
-  clear: right;
+  @include span-columns($header);
+  @include prefix($nav-primary);
+  @include rhythm(1, .5, .5, .5);
+  @include background-size(cover);
+  @include box-sizing(border-box);
+  @include box-shadow(
+    rgba(black, .5) 0 0 0 1px,
+    white 0 0 0 5px
+  );
+  position: relative;
+  z-index: 10;
+  background: white image-url('header.jpg') no-repeat center;
 }
 
 #logo, #tagline {
@@ -16,37 +24,25 @@
   $font-size: 112px;
   @include adjust-font-size-to($font-size, 3.5);
   @include trailer(0, $font-size);
-  a:hover { text-decoration: none; }
+  @include text-shadow(rgba(black, .75) 1px 1px 0);
+  a {
+    $color1: white;
+    $color2: white;
+    @include link-colors($color1, $color2, $color2, $color1, $color2);
+    &:hover {
+      background: none;
+      border: 0;
+    }
+  }
 }
 
 #tagline {
   $font-size: 20px;
   @include adjust-font-size-to($font-size);
   @include trailer(0, $font-size);
+  margin-left: 8px;
   text-transform: uppercase;
   letter-spacing: 10px;
-  color: lighten($text, 30%);
-}
-
-nav.secondary {
-  $font-size: 24px;
-  @include adjust-font-size-to($font-size, 2);
-  position: relative;
-  left: - gutter($main);
-  text-transform: uppercase;
-  ol, ul {
-    @include horizontal-list(0);
-    li { margin: 0 0 1px 1px; }
-  }
-  a {
-    display: block;
-    padding: 0 rhythm(2.5, $font-size);
-    background: rgba(black, .05);
-    &:hover {
-      text-decoration: none;
-    }
-    &:hover, &.active {
-      background: rgba(black, .1);
-    }
-  }
+  color: rgba(black, .8);
+  @include text-shadow(rgba(white, .5) 0 1px 0);
 }

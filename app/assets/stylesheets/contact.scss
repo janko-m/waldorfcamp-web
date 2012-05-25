@@ -1,0 +1,13 @@
+#contact {
+  $cols: 7;
+  article {
+    @include span-columns($cols);
+    h1 {
+      $font-size: 42px;
+      @include adjust-font-size-to($font-size);
+      @include rhythm(.75, 0, 0, .5, $font-size);
+    }
+    img { margin-left: rhythm(.5); }
+    p { @include trailer(.5); }
+  }
+}

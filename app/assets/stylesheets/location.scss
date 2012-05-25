@@ -1,12 +1,11 @@
 #location {
   article {
-    $cols: round($main/2);
-    p {
-      @include span-columns($cols, $main);
-    }
+    $cols: 12;
+    p { @include span-columns($cols, $main); }
     $cols: $main - $cols;
-    iframe {
+    iframe, small {
       @include span-columns($cols omega, $main);
+      clear: right;
     }
   }
 }

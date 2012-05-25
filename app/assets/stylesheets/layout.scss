@@ -28,8 +28,12 @@ h1 {
 }
 
 a {
-  @include hover-link;
   @include link-colors($link1, $link2, $link1, $link1, $link2);
+  text-decoration: none;
+  &:hover {
+    border-bottom: 1px solid rgba($link2, .3);
+    background: rgba($link1, .1);
+  }
 }
 
 img { max-width: 100%; }
