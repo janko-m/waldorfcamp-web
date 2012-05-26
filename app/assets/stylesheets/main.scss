@@ -4,9 +4,24 @@
 }
 
 article {
+  $font-size: 28px;
+  h2 {
+    @include adjust-font-size-to($font-size);
+    @include trailer(1, $font-size);
+    text-transform: uppercase;
+    color: lighten($text, 30%);
+    letter-spacing: 4px;
+  }
+
+  h1 + h2 {
+    @include leader(-1.5, $font-size);
+  }
+
   $cols: 6;
   .img, .iframe {
     @include span-columns($cols, $main, right);
     clear: right;
   }
 }
+
+strong { color: nth($colors, 5); }
