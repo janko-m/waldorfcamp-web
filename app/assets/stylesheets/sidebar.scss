@@ -31,7 +31,7 @@ nav.primary {
   a, .active { padding: rhythm(1, $font-size); }
   a {
     $color1: rgba(white, .75);
-    $color2: white;
+    $color2: rgba(white, .9);
     @include link-colors($color1, $color2, $color2, $color1, $color2);
     &:hover {
       background: rgba(white, .1);
