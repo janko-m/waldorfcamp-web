@@ -27,12 +27,3 @@
     }
   }
 }
-
-#yoga, #painting, #circus, #singing {
-  article {
-    $cols: 12;
-    p { @include span-columns($cols, $main); }
-    $cols: $main - $cols;
-    .img { @include span-columns($cols omega, $main); }
-  }
-}

@@ -2,3 +2,11 @@
   @include span-columns($main);
   @include prefix($nav-primary);
 }
+
+article {
+  $cols: 6;
+  .img, .iframe {
+    @include span-columns($cols, $main, right);
+    clear: right;
+  }
+}
