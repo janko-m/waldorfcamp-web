@@ -43,10 +43,8 @@ nav.primary {
 
 nav.secondary {
   $background: nth($colors, 4);
-  @include stretch-y;
   @include span-columns($nav-secondary omega);
   @include padding-leader(11, $font-size);
-  right: 0;
   color: black;
   a, .active {
     padding: rhythm(.75, $font-size);
