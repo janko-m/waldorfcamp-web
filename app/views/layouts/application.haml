@@ -1,7 +1,7 @@
 !!!
 %html{:lang => "en"}
   %head
-    %title Waldorf camp &middot; #{@title}
+    %title Waldorf camp · #{@title}
     %meta{:charset => "utf-8"}
     %script{:src => 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
     %link{:rel => "authors", :href => "humans.txt"}
@@ -10,7 +10,7 @@
     = stylesheet_link_tag "application", "jquery.fancybox"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body{:id => @title.downcase}
+  %body{:id => params[:action]}
     %nav.primary
       %ol
         = list_of navigation_pages do |page|
