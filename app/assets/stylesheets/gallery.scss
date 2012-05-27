@@ -34,7 +34,7 @@
       }
       color: white;
       border-color: white;
-      background: $link1;
+      background: nth($colors, 3);
     }
     a {
       $color1: darken(white, 40%);
