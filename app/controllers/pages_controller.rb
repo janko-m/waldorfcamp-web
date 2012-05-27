@@ -21,7 +21,7 @@ class PagesController < ApplicationController
     @camps = Gallery.camps
     @current_camp = Gallery.current_camp(params[:camp])
     @photos = Gallery.photos_from_camp(@current_camp).map(&:small320!).
-      paginate(:page => params[:page], :per_page => 50)
+      paginate(:page => params[:page], :per_page => 40)
   end
   caches_page :gallery
 
