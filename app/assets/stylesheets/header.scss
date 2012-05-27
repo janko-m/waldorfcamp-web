@@ -1,6 +1,6 @@
 #header {
   @include span-columns($header);
-  @include prefix($nav-primary);
+  @include prefix(1);
   @include rhythm(1, .5, .5, .5);
   @include box-sizing(border-box);
   @include box-shadow(
