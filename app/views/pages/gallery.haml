@@ -13,4 +13,6 @@
     = list_of @photos do |photo|
       = link_to image_tag(photo.source_url), photo.largest.source_url, :rel => 'gallery'
 
+  = will_paginate(@photos)
+
   = link_to "&nbsp;".html_safe, "#{request.path}/expire_cache", :class => "delete-cache"

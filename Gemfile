@@ -28,3 +28,4 @@ group :test do
 end
 
 gem "flickrie"
+gem "will_paginate", :require => ["will_paginate/array", "will_paginate"]
