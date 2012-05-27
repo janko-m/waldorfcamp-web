@@ -1,6 +1,7 @@
 #gallery {
   .photos {
     @include horizontal-list(0);
+    @include trailer;
     img { max-width: none; }
     li {
       overflow: hidden;
@@ -17,6 +18,39 @@
         background: none;
         border: 0;
       }
+    }
+  }
+  .pagination {
+    text-align: center;
+    * {
+      @include inline-block;
+      padding: 0 10px;
+      border: 1px solid;
+    }
+    .current {
+      font: {
+        style: normal;
+        weight: bold;
+      }
+      color: white;
+      border-color: white;
+      background: $link1;
+    }
+    a {
+      $color1: darken(white, 40%);
+      $color2: $text;
+      @include link-colors($color1, $color2, $color2, $color1, $color2);
+      background: rgba(black, .025);
+      border-color: lighten($color1, 20%);
+      &:hover {
+        background: rgba(black, .05);
+        border-color: lighten($text, 20%);
+      }
+    }
+    .disabled {
+      $color: darken(white, 20%);
+      color: $color;
+      border-color: darken(white, 5%);
     }
   }
 }
