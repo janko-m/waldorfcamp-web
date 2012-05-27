@@ -8,7 +8,7 @@ group :assets do
   gem "coffee-rails"
   gem "uglifier"
   gem "compass-rails"
-  gem "susy", "1.0.rc.0"
+  gem "susy", "1.0.rc.1"
   gem "jquery-rails"
 end
 
