@@ -2,7 +2,6 @@
   @include span-columns($header);
   @include prefix($nav-primary);
   @include rhythm(1, .5, .5, .5);
-  @include background-size(cover);
   @include box-sizing(border-box);
   @include box-shadow(
     rgba(black, .5) 0 0 0 1px,
