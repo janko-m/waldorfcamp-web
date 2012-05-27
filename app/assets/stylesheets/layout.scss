@@ -30,6 +30,7 @@ h1 {
 a {
   @include link-colors($link1, $link2, $link2, $link1, $link2);
   text-decoration: none;
+  &, &:hover { @include transition(all .2s); }
   &:hover {
     border-bottom: 1px solid rgba($link2, .3);
     background: rgba($link1, .1);
