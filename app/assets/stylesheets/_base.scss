@@ -16,7 +16,7 @@ $colors: #B52C38 #EBD1B0 #536682 #D9964B #DE6846;
 $text: lighten(black, 30%);
 
 $link1: nth($colors, 4);
-$link2: darken($link1, 10%);
+$link2: darken($link1, 15%);
 
 $body: 'Gentium Basic', Georgia, serif;
 $heading: $body;
