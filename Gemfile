@@ -3,8 +3,6 @@ source :rubygems
 gem "thin"
 gem "rails", "3.2.3"
 
-gem "sqlite3"
-
 group :assets do
   gem "sass-rails"
   gem "coffee-rails"
