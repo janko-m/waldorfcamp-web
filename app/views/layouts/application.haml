@@ -14,7 +14,7 @@
     %nav.primary
       %ol
         = list_of navigation_pages do |page|
-          = link_to_unless_current page.title, :action => page.action do
+          = link_to_unless_current page.title, page.route do
             %span.active= page.title
 
     %nav.secondary

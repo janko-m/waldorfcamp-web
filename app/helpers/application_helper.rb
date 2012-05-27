@@ -1,13 +1,16 @@
 module ApplicationHelper
   def navigation_pages
-    pages = [{:title => 'Home',      :action => 'index'},
-             {:title => 'About',     :action => 'about'},
-             {:title => 'Location',  :action => 'location'},
-             {:title => 'Workshops', :action => 'workshops'},
-             {:title => 'Gallery',   :action => 'gallery'},
-             {:title => 'Contact',   :action => 'contact'}]
+    pages = [{:title => 'Home',      :route => "/"},
+             {:title => 'About',     :route => "/about"},
+             {:title => 'Location',  :route => "/location"},
+             {:title => 'Workshops', :route => "/workshops"},
+             {:title => 'Gallery',   :route => "/gallery"},
+             {:title => 'Contact',   :route => "/contact"}]
 
-    pages.map! { |page| Struct.new(:title, :action).new(page[:title], page[:action]) }
+    pages.map! do |page|
+      page_class = Struct.new(:title, :route)
+      page_class.new(page[:title], page[:route])
+    end
   end
 
   def render_markdown(text)
