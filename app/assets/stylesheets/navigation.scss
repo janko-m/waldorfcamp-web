@@ -38,7 +38,7 @@ nav.secondary {
   $background: nth($colors, 4);
   color: black;
   ol, ul { @include horizontal-list(1px); }
-  a, .active { padding: rhythm(.75, $font-size) rhythm(.55, $font-size); }
+  a, .active { padding: rhythm(.75, $font-size) rhythm(.5, $font-size); }
   a {
     $color1: rgba(black, .5);
     $color2: rgba(black, .75);
