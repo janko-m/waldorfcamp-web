@@ -1,11 +1,11 @@
 #contact {
-  $contact: floor($site / 2);
+  $contact: floor($total-columns / 2);
   section {
-    @include span-columns($contact, $site);
+    @include span-columns($contact);
     img { max-height: 100%; }
     height: rhythm(10);
     &:last-child { @include omega; }
-    $cols: 4;
+    $cols: 2;
     .img {
       @include reset-columns(right);
       @include span-columns($cols, $contact);

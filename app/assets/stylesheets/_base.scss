@@ -1,10 +1,8 @@
-$total-columns: 24;
-$gutter-width: 2em;
+$total-columns: 12;
+$column-width: 3em;
+$gutter-width: 1em;
 $grid-padding: 0;
-$container-style: fluid;
-
-$site: 16;
-$spacing: ($total-columns - $site) / 2;
+$container-style: static;
 
 $base-font-size: 18px;
 $base-line-height: 30px;

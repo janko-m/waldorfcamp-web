@@ -1,9 +1,9 @@
 #workshops ul {
   @include unstyled-list;
   @include clearfix;
-  $cols: floor($site / 4);
+  $cols: floor($total-columns / 4);
   li {
-    @include span-columns($cols, $site);
+    @include span-columns($cols);
     &:last-child { @include omega; }
   }
   a {

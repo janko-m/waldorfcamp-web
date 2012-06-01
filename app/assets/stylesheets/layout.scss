@@ -36,10 +36,6 @@ a {
 
 img, iframe { max-width: 100%; }
 
-nav, [role='main'] {
-  @include pad($spacing, $spacing);
-}
-
 article {
   $font-size: 20px;
   h2 {
@@ -55,9 +51,9 @@ article {
     @include leader(-1, $font-size);
   }
 
-  $cols: 6;
+  $cols: 4;
   .img, .iframe {
-    @include span-columns($cols, $site, right);
+    @include span-columns($cols, $from: right);
     clear: right;
   }
 }
