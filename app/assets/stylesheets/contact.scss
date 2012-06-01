@@ -1,7 +1,7 @@
 #contact {
-  $contact: floor($main / 2);
+  $contact: floor($site / 2);
   section {
-    @include span-columns($contact, $main);
+    @include span-columns($contact, $site);
     img { max-height: 100%; }
     height: rhythm(10);
     &:last-child { @include omega; }
@@ -12,7 +12,7 @@
       line-height: 0;
     }
     $cols: $contact - $cols;
-    h1, p, ul { @include span-columns($cols omega, $contact); }
+    h2, p, ul { @include span-columns($cols omega, $contact); }
     p { @include trailer(.5); }
     ul {
       @include box-sizing(border-box);

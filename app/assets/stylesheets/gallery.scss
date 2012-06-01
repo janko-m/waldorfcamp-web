@@ -5,7 +5,7 @@
     img { max-width: none; }
     li {
       overflow: hidden;
-      width: 194px;
+      width: 208px;
       height: 210px;
       margin: 0 1px 1px 0;
     }
@@ -34,7 +34,7 @@
       }
       color: white;
       border-color: white;
-      background: nth($colors, 3);
+      background: nth($colors, 4);
     }
     a {
       $color1: darken(white, 40%);

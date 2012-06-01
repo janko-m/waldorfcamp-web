@@ -1,15 +1,27 @@
 #header {
-  @include span-columns($header);
-  @include prefix(1);
-  @include rhythm(1, .5, .5, .5);
+  $color1: rgba(nth($colors, 1), .1);
+  $color2: white;
+  @include rhythm(.5, 0, 0, .5);
   @include box-sizing(border-box);
-  @include box-shadow(
-    rgba(black, .5) 0 0 0 1px,
-    white 0 0 0 5px
-  );
-  position: relative;
-  z-index: 10;
-  background: white image-url('header.jpg') no-repeat center;
+  @include background(linear-gradient(
+    top left,
+    $color1 25%,
+    $color2 25%,
+    $color2 50%,
+    $color1 50%,
+    $color1 75%,
+    $color2 75%
+  ));
+  @include background-size(4px 4px);
+  hgroup {
+    $padding: 1;
+    $spacing: $spacing - $padding;
+    @include squish($spacing, $spacing);
+    @include pad($padding, $padding);
+    @include rhythm(0, .5, .5, 0);
+    outline: 10px solid white;
+    background: white image-url('header.jpg') no-repeat center;
+  }
 }
 
 #logo, #tagline {

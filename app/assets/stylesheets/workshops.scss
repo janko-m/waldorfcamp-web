@@ -1,9 +1,10 @@
 #workshops ul {
   @include unstyled-list;
   @include clearfix;
-  $cols: floor($main / 4);
+  $cols: floor($site / 4);
   li {
-    @include span-columns($cols, $main);
+    @include span-columns($cols, $site);
+    &:last-child { @include omega; }
   }
   a {
     $font-size: 24px;

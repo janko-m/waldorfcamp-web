@@ -5,20 +5,17 @@ html { height: 100%; }
 body {
   @include container;
   // @include susy-grid-background;
-  @include rhythm(0, 0, 0, 0);
+  @include rhythm(0, 0, .5, 0);
   min-height: 100%;
   position: relative;
-  font-family: $body;
+  font-family: $serif;
   color: $text;
 }
 
 h1, h2, h3, p, ol, ul, article { @include rhythm(0, 0, 0, 1); }
 
 h1, h2, h3 {
-  font: {
-    family: $heading;
-    weight: normal;
-  }
+  font-weight: normal;
 }
 
 h1 {
@@ -38,3 +35,29 @@ a {
 }
 
 img, iframe { max-width: 100%; }
+
+nav, [role='main'] {
+  @include pad($spacing, $spacing);
+}
+
+article {
+  $font-size: 20px;
+  h2 {
+    @include adjust-font-size-to($font-size);
+    @include trailer(1, $font-size);
+    font-family: $sans;
+    text-transform: uppercase;
+    color: lighten($text, 40%);
+    letter-spacing: 2px;
+  }
+
+  h1 + h2 {
+    @include leader(-1, $font-size);
+  }
+
+  $cols: 6;
+  .img, .iframe {
+    @include span-columns($cols, $site, right);
+    clear: right;
+  }
+}

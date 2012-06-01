@@ -3,12 +3,10 @@ $gutter-width: 2em;
 $grid-padding: 0;
 $container-style: fluid;
 
-$nav-primary: 3;
-$nav-secondary: 3;
-$header: $total-columns - $nav-secondary;
-$main: $total-columns - $nav-primary - $nav-secondary;
+$site: 16;
+$spacing: ($total-columns - $site) / 2;
 
-$base-font-size: 20px;
+$base-font-size: 18px;
 $base-line-height: 30px;
 
 $colors: #B52C38 #EBD1B0 #536682 #D9964B #DE6846;
@@ -18,12 +16,18 @@ $text: lighten(black, 30%);
 $link1: nth($colors, 4);
 $link2: darken($link1, 15%);
 
-$body: 'Gentium Basic', Georgia, serif;
-$heading: $body;
+$serif: 'Gentium Basic', Georgia, serif;
+$sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $display: 'Love Ya Like A Sister', sans-serif;
 
 @mixin unstyled-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+@mixin v-borders($width: 1px, $lines: 1, $font-size: $base-font-size, $border-style: $default-rhythm-border-style) {
+  @each $side in left, right {
+    @include apply-side-rhythm-border($side, $width, $lines, $font-size, $border-style);
+  }
 }
