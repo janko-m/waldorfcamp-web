@@ -1,12 +1,10 @@
 @include establish-baseline;
 
-html { height: 100%; }
 
 body {
   @include container;
   // @include susy-grid-background;
   @include rhythm(0, 0, .5, 0);
-  min-height: 100%;
   position: relative;
   font-family: $serif;
   color: $text;
