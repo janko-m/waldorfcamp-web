@@ -4,8 +4,8 @@
   %ol
     = list_of @camps do |camp|
       - year, island = camp.title.split(', ')
-      = link_to_unless camp.title == @current_camp.title, camp.title, gallery_path(:camp => "#{year}-#{island.downcase}") do
-        %span.active= camp.title
+      = link_to_unless camp.title == @current_camp.title, year, gallery_path(:camp => "#{year}-#{island.downcase}") do
+        %span.active= year
 
 %article
   %h1= @current_camp.title

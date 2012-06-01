@@ -15,7 +15,7 @@ nav.primary {
     transform: uppercase;
   }
   ol, ul { @include horizontal-list(0); }
-  a, .active { padding: rhythm(1, $font-size) rhythm(.5, $font-size); }
+  a, .active { padding: rhythm(.25, $font-size) rhythm(.5, $font-size); }
   a {
     $color1: rgba($link1, .75);
     $color2: $link2;
@@ -36,22 +36,25 @@ $font-size: 18px;
 nav.secondary {
   @include adjust-font-size-to($font-size);
   $background: nth($colors, 4);
-  color: black;
-  ol, ul { @include horizontal-list(1px); }
-  a, .active { padding: rhythm(.75, $font-size) rhythm(.5, $font-size); }
+  ol, ul {
+    @include horizontal-list(0);
+    li {
+      margin: 0 1px 1px 0;
+    }
+  }
+  a, .active { padding: rhythm(.25, $font-size) rhythm(.75, $font-size); }
   a {
-    $color1: rgba(black, .5);
-    $color2: rgba(black, .75);
+    $color1: rgba(black, .35);
+    $color2: $text;
     @include link-colors($color1, $color2, $color2, $color1, $color2);
-    background: rgba($background, .1);
     &:hover {
-      background: rgba($background, .2);
+      background: none;
       border-bottom: 0;
     }
   }
   .active {
     background: rgba($background, .2);
-    @include v-borders(1px, .5);
-    border-color: $background;
+    @include h-borders(1px, .25);
+    border-color: rgba($background, .5);
   }
 }
