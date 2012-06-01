@@ -2,7 +2,7 @@ nav {
   a, .active { display: block; }
 }
 
-$font-size: 14px;
+$font-size: 20px;
 nav.primary {
   @include adjust-font-size-to($font-size);
   margin-left: rhythm(-0.5);
@@ -42,7 +42,7 @@ nav.secondary {
       margin: 0 1px 1px 0;
     }
   }
-  a, .active { padding: rhythm(.25, $font-size) rhythm(.75, $font-size); }
+  a, .active { padding: rhythm(.25, $font-size) rhythm(.5, $font-size); }
   a {
     $color1: rgba(black, .35);
     $color2: $text;
