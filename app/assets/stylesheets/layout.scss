@@ -47,6 +47,9 @@ article {
 
   h1 + h2 {
     @include leader(-1, $font-size);
+    font-style: italic;
+    padding-left: 10px;
+    border-left: 20px solid rgba(black, .05);
   }
 
   $cols: 4;
