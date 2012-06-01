@@ -1,7 +1,7 @@
 #gallery {
   .photos {
     @include horizontal-list(0);
-    @include trailer;
+    @include trailer(0);
     img { max-width: none; }
     li {
       overflow: hidden;
