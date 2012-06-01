@@ -17,8 +17,8 @@ nav.primary {
   ol, ul { @include horizontal-list(0); }
   a, .active { padding: rhythm(1, $font-size) rhythm(.5, $font-size); }
   a {
-    $color1: rgba(black, .5);
-    $color2: $link1;
+    $color1: rgba($link1, .75);
+    $color2: $link2;
     @include link-colors($color1, $color2, $color2, $color1, $color2);
     &:hover {
       background: rgba(white, .1);
@@ -26,7 +26,10 @@ nav.primary {
     }
   }
   color: $link2;
-  .active { background: rgba(white, .2); }
+  .active {
+    background: rgba(white, .2);
+    font-weight: bold;
+  }
 }
 
 $font-size: 18px;
