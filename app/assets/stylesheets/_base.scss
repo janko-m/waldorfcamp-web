@@ -15,7 +15,7 @@ $link1: nth($colors, 4);
 $link2: darken($link1, 15%);
 
 $serif: 'Gentium Basic', Georgia, serif;
-$sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$sans: 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $display: 'Love Ya Like A Sister', sans-serif;
 
 @mixin unstyled-list {
