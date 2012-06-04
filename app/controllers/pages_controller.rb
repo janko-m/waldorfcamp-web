@@ -18,10 +18,9 @@ class PagesController < ApplicationController
   end
 
   def gallery
-    @camps = Gallery.camps
-    @current_camp = Gallery.current_camp(params[:camp])
-    @photos = Gallery.photos_from_camp(@current_camp,
-      :page => params[:page], :per_page => 40).map!(&:small320!)
+    @camp_titles = Camp.all.map(&:title)
+    @current_camp = Camp.find_by_url_title(params[:camp])
+    @photos = @current_camp.photos(:page => params[:page], :per_page => 40)
   end
   caches_page :gallery
 

@@ -2,9 +2,9 @@
 
 - content_for :navigation do
   %ol
-    = list_of @camps do |camp|
-      - year, island = camp.title.split(', ')
-      = link_to_unless camp.title == @current_camp.title, year, gallery_path(:camp => "#{year}-#{island.downcase}") do
+    = list_of @camp_titles do |camp_title|
+      - year, island = camp_title.split(', ')
+      = link_to_unless camp_title == @current_camp.title, year, gallery_path(:camp => "#{year}-#{island.downcase}") do
         %span.active= year
 
 %article
