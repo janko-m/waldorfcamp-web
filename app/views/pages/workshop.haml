@@ -1,6 +1,10 @@
-- @title = params[:workshop].capitalize
+- @title = @workshop.title
 
-= render :partial => "workshops_nav"
+- content_for :navigation do
+  %ul
+    = list_of @workshops do |workshop|
+      = link_to_unless workshop == @workshop, workshop, workshop_path(workshop) do
+        %span.active= workshop
 
 %article
-  = render_markdown(workshop_description(params[:workshop]))
+  = render_markdown(@workshop.description)

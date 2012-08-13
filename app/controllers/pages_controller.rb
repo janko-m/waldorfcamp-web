@@ -12,20 +12,23 @@ class PagesController < ApplicationController
   end
 
   def workshops
+    @workshops = Workshop.all
   end
 
   def workshop
+    @workshops = Workshop.all
+    @workshop = Workshop.find(params[:workshop])
   end
 
   def gallery
-    @camp_titles = Camp.all.map(&:title)
-    @current_camp = Camp.find_by_url_title(params[:camp])
-    @photos = @current_camp.photos(:page => params[:page], :per_page => 40)
+    @camps = Camp.all
+    @camp = Camp.find(params[:camp])
+    @photos = @camp.photos(page: params[:page], per_page: 40)
   end
   caches_page :gallery
 
-  def expire_camp_cache
-    expire_page gallery_path(:camp => params[:camp])
+  def expire_cache
+    expire_page gallery_path(camp: params[:camp], page: params[:page])
     redirect_to :back
   end
 end

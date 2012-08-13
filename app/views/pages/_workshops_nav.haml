@@ -1,5 +1,0 @@
-- content_for :navigation do
-  %ul
-    = list_of workshops do |workshop|
-      = link_to_unless workshop == @title, workshop, "/workshops/#{workshop.downcase}" do
-        %span.active= workshop

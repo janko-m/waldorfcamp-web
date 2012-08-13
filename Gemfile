@@ -24,3 +24,4 @@ end
 
 gem "flickrie"
 gem "will_paginate"
+gem "active_attr"

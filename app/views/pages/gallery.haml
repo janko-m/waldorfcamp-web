@@ -1,18 +1,17 @@
-- @title = "Gallery · #{@current_camp.title}"
+- @title = "Gallery · #{@camp.title}"
 
 - content_for :navigation do
   %ol
-    = list_of @camp_titles do |camp_title|
-      - year, island = camp_title.split(', ')
-      = link_to_unless camp_title == @current_camp.title, year, gallery_path(:camp => "#{year}-#{island.downcase}") do
-        %span.active= year
+    = list_of @camps do |camp|
+      = link_to_unless camp.title == @camp.title, camp.year, gallery_path(camp) do
+        %span.active= camp.year
 
 %article
-  %h1= @current_camp.title
+  %h1= @camp.title
   %ol.photos
     = list_of @photos do |photo|
-      = link_to image_tag(photo.source_url), photo.largest.source_url, :rel => 'gallery'
+      = link_to image_tag(photo.source_url), photo.largest.source_url, rel: "gallery"
 
   = will_paginate(@photos)
 
-  = link_to "&nbsp;".html_safe, "#{request.path}/expire_cache", :class => "delete-cache"
+  = link_to "&nbsp;".html_safe, expire_cache_path(camp: @camp, page: params[:page]), class: "delete-cache", method: :delete
