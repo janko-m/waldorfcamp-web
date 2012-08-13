@@ -1,7 +1,7 @@
 source :rubygems
 
 gem "thin"
-gem "rails", "3.2.3"
+gem "rails"
 
 group :assets do
   gem "sass-rails"
@@ -13,6 +13,7 @@ group :assets do
 end
 
 gem "haml-rails"
+gem "haml", "3.2.0.beta.1"
 gem "redcarpet"
 
 group :development do
