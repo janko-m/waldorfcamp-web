@@ -22,9 +22,5 @@ group :development do
   gem "guard-livereload"
 end
 
-group :test do
-  gem "turn", :require => false
-end
-
 gem "flickrie"
 gem "will_paginate"
