@@ -27,4 +27,4 @@ end
 gem "flickrie"
 gem "will_paginate"
 gem "active_attr"
-gem "nokogiri"
+gem "sendgrid_email_forwarder", github: "janko-m/sendgrid_email_forwarder"
