@@ -1,0 +1,10 @@
+.list-grid {
+  @extend .clearfix;
+  @extend .list-unstyled;
+
+  > * {
+    float: left;
+    margin-right: $hsu;
+    margin-bottom: $hsu;
+  }
+}

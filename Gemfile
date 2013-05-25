@@ -1,30 +1,29 @@
-ruby "1.9.3"
+ruby "2.0.0"
 
-source :rubygems
+source "https://rubygems.org"
 
 gem "thin"
 gem "rails"
 
 group :assets do
   gem "sass-rails"
+  gem "bourbon"
   gem "coffee-rails"
   gem "uglifier"
-  gem "compass-rails"
-  gem "susy", "1.0.rc.1"
-  gem "jquery-rails"
 end
 
+gem "jquery-rails"
+
+gem "haml", ">= 4"
 gem "haml-rails"
-gem "haml", "3.2.0.beta.1"
 gem "redcarpet"
-
-group :development do
-  gem "debugger"
-  gem "foreman"
-  gem "guard-livereload"
-end
 
 gem "flickrie"
 gem "will_paginate"
 gem "active_attr"
-gem "sendgrid_email_forwarder", github: "janko-m/sendgrid_email_forwarder"
+
+group :development do
+  gem "pry-rails"
+  gem "better_errors"
+  gem "binding_of_caller", ">= 0.7.1"
+end

@@ -1,0 +1,31 @@
+.l-main {
+  padding-top: $bsu;
+  padding-bottom: $hsu;
+
+  .l-page-pages-index &,
+  .l-page-pages-workshop & {
+    img {
+      @extend .polaroid;
+      max-height: 100%;
+    }
+
+    .img {
+      margin-bottom: $hsu;
+
+      &.pull-left {
+        margin-right: $hsu;
+      }
+
+      &.pull-right {
+        margin-left: $bsu;
+      }
+    }
+  }
+
+  .l-page-pages-index & {
+    p:first-of-type {
+      @include font-size($bfs + 2px);
+      color: nth($colors, 3);
+    }
+  }
+}

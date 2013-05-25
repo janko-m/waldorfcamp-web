@@ -13,7 +13,7 @@ WaldorfCamp::Application.routes.draw do
     get "contact"
   end
 
-  mount SendgridEmailForwarder::Engine, at: ""
+  # mount SendgridEmailForwarder::Engine, at: ""
 
   match "404", to: "errors#not_found"
   match "500", to: "errors#internal_server_error"

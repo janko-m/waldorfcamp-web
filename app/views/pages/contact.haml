@@ -3,24 +3,32 @@
 %article
   %h1 Contact
 
-  %section
-    :markdown
-      ![photo of Helena](/assets/contact/helena.jpg)
+  .contact-card
+    .contact-card-header
+      %h3 Helena Ivetić
 
-      ## Helena Ivetić
+    .contact-card-img
+      = image_tag "contact/helena.jpg", alt: "Helena Ivetić"
 
-      Contact her about the camp:
+    .contact-card-body
+      .space-half-bottom
+        Contact her about the camp:
 
-      - <waldorfcamp@yahoo.com>
-      - +385 92 17 65 555
+      %ul.list-unstyled.space-half-top
+        %li= mail_to "waldorfcamp@yahoo.com"
+        %li +385 92 17 65 555
 
-  %section
-    :markdown
-      ![photo of Matija](/assets/contact/matija.jpg)
+  .contact-card
+    .contact-card-header
+      %h3 Matija Marohnić
 
-      ## Matija Marohnić
+    .contact-card-img
+      = image_tag "contact/matija.jpg", alt: "Matija Marohnić"
 
-      Contact him about the site:
+    .contact-card-body
+      .space-half-bottom
+        Contact him about the site:
 
-      - <matija.marohnic@gmail.com>
-      - +385 91 88 71 971
+      %ul.list-unstyled.space-half-top
+        %li= mail_to "matija.marohnic@gmail.com"
+        %li +385 91 88 71 971

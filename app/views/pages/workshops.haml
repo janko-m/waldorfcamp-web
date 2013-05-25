@@ -6,6 +6,8 @@
 
     These are the workshops which have been held regularly since the beginning of the camp. So, besides these, we also had workshops for drama, archery, folk dances, drumming... you name it!
 
-  %ul
-    = list_of @workshops do |workshop|
-      = link_to workshop, workshop_path(workshop), class: workshop.name
+  %ul.list-grid
+    = list_of @workshops, class: "polaroid" do |workshop|
+      = link_to workshop_path(workshop), class: workshop.name do
+        = image_tag "workshops/navigation/#{workshop.name.downcase}.jpg", class: "space-half-bottom", alt: workshop
+        .polaroid-label= workshop

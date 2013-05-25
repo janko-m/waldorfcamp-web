@@ -1,0 +1,8 @@
+$base-font-family:  "signika negative", $helvetica;
+
+$base-weight:       300 400 600 700;
+
+$colors:            #FFC718 #FE866B #58AAE4 #235391 #050E2D;
+
+$link-color:        nth($colors, 2);
+$link-hover:        nth($colors, 4);

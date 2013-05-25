@@ -1,0 +1,12 @@
+.color-scheme {
+  > * {
+    @include size(2 * $bsu);
+    display: inline-block;
+
+    @for $i from 1 through length($colors) {
+      &:nth-child(#{$i}) {
+        background-color: nth($colors, $i);
+      }
+    }
+  }
+}

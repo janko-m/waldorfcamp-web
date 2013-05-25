@@ -1,0 +1,36 @@
+.pagination {
+  > * {
+    display: inline-block;
+    padding: $hsu/2 $hsu;
+    background-color: white;
+    border: 1px solid rgba(black, .25);
+    border-bottom: 2px solid rgba(black, .45);
+    border-radius: 2px;
+  }
+
+  a {
+    @include color-link(rgba(black, .65), nth($colors, 2));
+
+    @include on-interact {
+      background: none;
+      border-color: rgba(nth($colors, 2), .5);
+      border-bottom-color: nth($colors, 2);
+    }
+  }
+
+  .current {
+    background-color: nth($colors, 2);
+    box-shadow: white -1px -1px 0;
+    color: white;
+    font-style: normal;
+  }
+
+  .gap {
+    border: none;
+    padding: $hsu/2;
+  }
+
+  .disabled {
+    opacity: .25;
+  }
+}

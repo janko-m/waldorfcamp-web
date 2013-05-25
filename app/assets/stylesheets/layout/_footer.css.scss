@@ -1,0 +1,6 @@
+.l-footer {
+  @include font-size(14px);
+  padding-top: $bsu;
+  border-top: 1px solid shade(white, 10%);
+  color: shade(white, 40%);
+}

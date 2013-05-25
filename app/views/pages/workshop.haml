@@ -1,10 +1,9 @@
 - @title = @workshop.title
 
 - content_for :navigation do
-  %ul
-    = list_of @workshops do |workshop|
-      = link_to_unless workshop == @workshop, workshop, workshop_path(workshop) do
-        %span.active= workshop
+  - @workshops.each do |workshop|
+    = link_to_unless workshop == @workshop, workshop, workshop_path(workshop) do
+      = link_to workshop, workshop_path(workshop), class: "active"
 
 %article
   = render_markdown(@workshop.description)

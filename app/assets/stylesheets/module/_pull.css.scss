@@ -1,0 +1,5 @@
+@each $dir in left, right {
+  .pull-#{$dir} {
+    float: $dir;
+  }
+}

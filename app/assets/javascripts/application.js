@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.fancybox.pack
-//= require jquery.mousewheel-3.0.6.pack
+//
+//= require fancybox/jquery.fancybox
+//
 //= require_tree .

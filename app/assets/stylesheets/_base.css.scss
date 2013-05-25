@@ -1,0 +1,42 @@
+html {
+  font-family: $base-font-family;
+  font-weight: nth($base-weight, 1);
+}
+
+h1 {
+  @include font-size($h1-size);
+  font-weight: nth($base-weight, 2);
+  color: nth($colors, 4);
+}
+
+h2 {
+  @include font-size($h2-size);
+  margin-bottom: $hsu;
+  font-weight: nth($base-weight, 1);
+}
+
+h3 {
+  @include font-size($h3-size);
+  margin-bottom: $hsu;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: nth($base-weight, 1);
+  color: nth($colors, 4);
+}
+
+a {
+  @include color-link($link-color, $link-hover);
+  @include transition(.2s);
+  border-bottom: 1px solid rgba(nth($colors, 2), .25);
+  text-decoration: none;
+
+  @include on-interact {
+    background-color: rgba(nth($colors, 3), .15);
+    border-color: nth($colors, 4);
+  }
+}
+
+address {
+  font-style: normal;
+  font-weight: nth($base-weight, 2);
+}

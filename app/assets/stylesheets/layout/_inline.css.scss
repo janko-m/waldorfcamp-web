@@ -1,0 +1,8 @@
+.l-inline {
+  @extend .clearfix;
+
+  > * {
+    display: inline-block;
+    float: left;
+  }
+}

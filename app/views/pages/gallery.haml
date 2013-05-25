@@ -1,16 +1,18 @@
 - @title = "Gallery · #{@camp.title}"
 
 - content_for :navigation do
-  %ol
-    = list_of @camps do |camp|
-      = link_to_unless camp.title == @camp.title, camp.year, gallery_path(camp) do
-        %span.active= camp.year
+  - @camps.each do |camp|
+    = link_to_unless camp.title == @camp.title, camp.year, gallery_path(camp) do
+      = link_to camp.year, gallery_path(camp), class: "active"
 
 %article
   %h1= @camp.title
-  %ol.photos
-    = list_of @photos do |photo|
-      = link_to image_tag(photo.source_url), photo.largest.source_url, rel: "gallery"
+
+  = will_paginate(@photos)
+
+  .gallery.space-top.space-bottom
+    - @photos.each do |photo|
+      = link_to image_tag(photo.source_url), photo.largest.source_url, rel: "gallery", class: "fancybox"
 
   = will_paginate(@photos)
 
