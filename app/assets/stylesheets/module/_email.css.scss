@@ -1,0 +1,10 @@
+.email {
+  margin-bottom: $bsu;
+  padding: $hsu;
+  background-color: white;
+  border: 1px solid rgba(black, .2);
+  border-radius: 4px;
+  color: rgba(black, .8);
+
+  > *:last-child { margin-bottom: 0; }
+}

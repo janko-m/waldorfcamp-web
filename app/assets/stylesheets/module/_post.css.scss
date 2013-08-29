@@ -1,0 +1,8 @@
+.post {
+  .l-page-pages-index & {
+    > p:first-of-type {
+      @include font-size($bfs + 2px);
+      color: nth($colors, 3);
+    }
+  }
+}
