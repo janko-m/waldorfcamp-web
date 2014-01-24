@@ -10,7 +10,7 @@
 
   = will_paginate(@photos)
 
-  .gallery.space-top.space-bottom
+  .gallery.l-fl
     - @photos.each do |photo|
       = link_to image_tag(photo.source_url), photo.largest.source_url, rel: "gallery", class: "fancybox"
 

@@ -1,7 +1,7 @@
 .pagination {
   > * {
     display: inline-block;
-    padding: $hsu/2 $hsu;
+    padding: $suh/2 $suh;
     background-color: white;
     border: 1px solid rgba(black, .25);
     border-bottom: 2px solid rgba(black, .45);
@@ -9,9 +9,9 @@
   }
 
   a {
-    @include color-link(rgba(black, .65), nth($colors, 2));
+    @include link-color(rgba(black, .65), nth($colors, 2));
 
-    @include on-interact {
+    #{$interact} {
       background: none;
       border-color: rgba(nth($colors, 2), .5);
       border-bottom-color: nth($colors, 2);
@@ -27,7 +27,7 @@
 
   .gap {
     border: none;
-    padding: $hsu/2;
+    padding: $suh/2;
   }
 
   .disabled {

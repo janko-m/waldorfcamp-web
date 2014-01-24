@@ -6,21 +6,22 @@
     %meta{http_equiv: "X-UA-Compatibile", content: "IE=edge,chrome=1"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
     %link{rel: "authors", href: "humans.txt"}
-    = favicon_link_tag
     = stylesheet_link_tag "application"
+    = favicon_link_tag
     = render "js"
     = render "webfonts"
     = render "analytics"
     = csrf_meta_tags
 
-  %body{class: "l-page-#{params[:controller]} l-page-#{params[:controller]}-#{params[:action]}"}
+  %body{class: "page-#{params[:controller]} page-#{params[:controller]}-#{params[:action]}"}
     = render "navigation"
-    = render "sub_navigation"
-    - if params[:controller] == "pages" and params[:action] == "index"
-      = render "hero-unit"
+    = render "navigation_sub"
 
-    .l-main{role: "main"}
-      .l-container
+    - if params[:controller] == "pages" and params[:action] == "index"
+      = render "jumbotron"
+
+    %main.main{role: "main"}
+      .container
         -# = render "color_scheme"
         = yield
 

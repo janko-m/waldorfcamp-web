@@ -3,32 +3,29 @@
 %article
   %h1 Contact
 
-  .contact-card
-    .contact-card-header
-      %h3 Helena Ivetić
+  .row
+    .col-xs-12.col-sm-6
+      .thumbnail.media
+        .pull-left
+          = image_tag "contact/helena.jpg", class: "media-object", alt: "Helena Ivetić"
 
-    .contact-card-img
-      = image_tag "contact/helena.jpg", alt: "Helena Ivetić"
+        .media-body.m-top-hl
+          %h3.media-heading Helena Ivetić
+          %p Contact her about the camp:
 
-    .contact-card-body
-      .space-half-bottom
-        Contact her about the camp:
+          %ul.list-unstyled.m-top-hl
+            %li= mail_to "camp.waldorf@gmail.com"
+            %li +385 92 17 65 555
 
-      %ul.list-unstyled.space-half-top
-        %li= mail_to "camp.waldorf@gmail.com"
-        %li +385 92 17 65 555
+    .col-xs-12.col-sm-6
+      .thumbnail.media
+        .pull-left
+          = image_tag "contact/matija.jpg", class: "media-object", alt: "Matija Marohnić"
 
-  .contact-card
-    .contact-card-header
-      %h3 Matija Marohnić
+        .media-body.m-top-hl
+          %h3.media-heading Matija Marohnić
+          %p Contact him about the website:
 
-    .contact-card-img
-      = image_tag "contact/matija.jpg", alt: "Matija Marohnić"
-
-    .contact-card-body
-      .space-half-bottom
-        Contact him about the site:
-
-      %ul.list-unstyled.space-half-top
-        %li= mail_to "matija.marohnic@gmail.com"
-        %li +385 91 88 71 971
+          %ul.list-unstyled.m-top-hl
+            %li= mail_to "matija.marohnic@gmail.com"
+            %li +385 91 88 71 971

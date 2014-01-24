@@ -1,0 +1,40 @@
+@mixin font-size($font-size, $line-height: 1) {
+  font-size: $font-size;
+  line-height: ($line-height * $sub) / $font-size
+}
+
+@mixin link-color($color1, $color2: $color1) {
+  color: $color1;
+
+  #{$interact} {
+    color: $color2;
+  }
+}
+
+@mixin bleed($side: both, $amount: $grid-gutter-width/2) {
+  @if $side == left {
+    margin-left:  - $amount;
+    padding-left:   $amount;
+  }
+  @if $side == right {
+    margin-right: - $amount;
+    padding-right:  $amount;
+  }
+  @if $side == both {
+    margin-left:  - $amount;
+    margin-right: - $amount;
+    padding-left:   $amount;
+    padding-right:  $amount;
+  }
+}
+
+@mixin no-bleed {
+  margin-left:    0;
+  margin-right:   0;
+  padding-left:   0;
+  padding-right:  0;
+}
+
+.is-bleeding {
+  @include bleed;
+}

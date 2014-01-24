@@ -1,0 +1,15 @@
+.navigation-sub {
+  background-color: shade(white, 5%);
+
+  a {
+    @include link-color(rgba(black, .5), rgba(black, .75));
+    display: inline-block;
+    border-bottom: none;
+    padding: $suh/2 $suh;
+  }
+
+  .active {
+    font-weight: nth($base-weight, 3);
+    color: $link-hover-color;
+  }
+}

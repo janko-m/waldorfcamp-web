@@ -1,0 +1,20 @@
+.navigation {
+  background-color: white;
+  border-bottom: 1px solid shade(white, 10%);
+
+  i {
+    @include position(relative, -1px 0 0 0);
+  }
+
+  a {
+    display: inline-block;
+    padding: $suh;
+    border-bottom: none;
+    line-height: $sub;
+  }
+
+  .active {
+    font-weight: nth($base-weight, 3);
+    color: $link-hover-color;
+  }
+}

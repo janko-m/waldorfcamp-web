@@ -2,25 +2,18 @@
 }
 
   .brand-logo {
-    @include font-size(88px);
     font-weight: nth($base-weight, 3);
 
     a {
-      text-decoration: none;
       border-bottom: none;
 
-      @include on-interact {
+      #{$interact} {
         background: none;
-      }
-
-      .l-hero-unit & {
-        @include color-link(white);
       }
     }
   }
 
   .brand-tagline {
-    @include font-size(30px);
     text-transform: uppercase;
     letter-spacing: 2px;
   }

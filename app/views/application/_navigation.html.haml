@@ -1,5 +1,5 @@
-%nav.l-navigation
-  .l-container.l-inline
+%nav.navigation
+  .container.l-fl
     = link_to icon("brightness-high"), root_path, class: "icon-container"
     - navigation_pages.each do |page|
       = link_to_unless_current page.title, page.route do

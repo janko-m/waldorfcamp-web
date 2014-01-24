@@ -7,6 +7,7 @@ gem "rails"
 
 group :assets do
   gem "sass-rails"
+  gem "bootstrap-sass"
   gem "bourbon"
   gem "coffee-rails"
   gem "uglifier"

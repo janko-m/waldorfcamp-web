@@ -1,3 +1,0 @@
-[submodule "app/assets/stylesheets/base-style"]
-	path = app/assets/stylesheets/base-style
-	url = git://github.com/silvenon/base-style.git

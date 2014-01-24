@@ -1,32 +1,27 @@
-@import "config/base-style";
-@import "base-style/base-style";
+@import "bootstrap";
 @import "fancybox/jquery.fancybox";
+@import "bourbon";
 
 @import "variables";
-@import "base";
 @import "mixins";
+@import "base";
 
-@import "layout/hero-unit";
-@import "layout/navigation";
-@import "layout/sub-navigation";
-@import "layout/main";
-@import "layout/footer";
-@import "layout/wf";
-@import "layout/inline";
+@import "shared/jumbotron";
+@import "shared/navigation";
+@import "shared/navigation-sub";
+@import "shared/main";
+@import "shared/footer";
+@import "shared/wf";
 
-@import "module/alert";
-@import "module/brand";
-@import "module/color-scheme";
-@import "module/contact-card";
-@import "module/email";
-@import "module/gallery";
-@import "module/icons";
-@import "module/list-unstyled";
-@import "module/list-grid";
-@import "module/pagination";
-@import "module/polaroid";
-@import "module/post";
-@import "module/pull";
-@import "module/space";
+@import "components/brand";
+@import "components/color-scheme";
+@import "components/container";
+@import "components/float";
+@import "components/icomoon";
+@import "components/pagination";
+@import "components/space";
+
+@import "sections/gallery";
+@import "sections/workshops";
 
 @import "overrides/fancybox";

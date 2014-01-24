@@ -1,0 +1,44 @@
+$img-height: 120px;
+
+.gallery {
+  margin-top: $sub;
+  margin-bottom: $sub;
+
+  > * {
+    width: 50%;
+    height: $img-height;
+    border: 1px solid #fff;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    overflow: hidden;
+
+    @media (min-width: $screen-xs-min) {
+      width: 33.3333333333%;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      width: 25%;
+    }
+  }
+
+  a {
+    @include position(relative);
+
+    #{$interact} {
+      background-color: transparent;
+      border-color: #fff;
+
+      &:after {
+        @include position(absolute, 0px 0px 0px 0px);
+        content: "\e1c8"; // expand
+        font-family: "icomoon";
+        display: inline-block;
+        background-color: rgba(black, .5);
+        color: white;
+        font-size: 32px;
+        line-height: $img-height;
+        text-align: center;
+      }
+    }
+  }
+}

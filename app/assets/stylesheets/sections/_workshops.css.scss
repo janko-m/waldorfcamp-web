@@ -1,0 +1,23 @@
+.workshops {
+}
+
+  .workshop {
+    text-align: center;
+
+    a {
+      border-bottom: none;
+
+      #{$interact} {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .workshop-single {
+    img {
+      @extend .img-thumbnail;
+      float: left;
+      margin-right: $sub;
+      margin-bottom: $suh;
+    }
+  }

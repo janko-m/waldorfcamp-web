@@ -5,5 +5,5 @@
     = link_to_unless workshop == @workshop, workshop, workshop_path(workshop) do
       = link_to workshop, workshop_path(workshop), class: "active"
 
-%article
+%article.workshop-single.clearfix
   = render_markdown(@workshop.description)

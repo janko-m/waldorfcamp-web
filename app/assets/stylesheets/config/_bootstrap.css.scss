@@ -1,0 +1,13 @@
+@import "addons/font-family";
+
+$colors:                    #FFC718 #FE866B #58AAE4 #235391 #050E2D;
+
+$link-color:                nth($colors, 2);
+$link-hover-color:          nth($colors, 4);
+
+$font-family-sans-serif:    "signika negative", $helvetica;
+
+$font-size-base:            16px;
+
+$line-height-computed:      24px;
+$line-height-base:          $line-height-computed / $font-size-base

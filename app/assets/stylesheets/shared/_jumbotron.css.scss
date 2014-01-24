@@ -1,0 +1,21 @@
+.jumbotron {
+  @include background(
+    linear-gradient(
+      rgba(#000, .05),
+      rgba(#000, .05)
+    ),
+    image-url("jumbotron.jpg") 50% no-repeat
+  );
+  margin-bottom: $sub;
+  text-align: center;
+  color: white;
+  text-shadow: rgba(#000, .5) 1px 1px 3px;
+
+  .container {
+    max-width: 800px;
+  }
+
+  .brand-logo a {
+    @include link-color(white);
+  }
+}
