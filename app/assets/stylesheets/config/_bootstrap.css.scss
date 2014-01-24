@@ -2,7 +2,9 @@
 
 $colors:                    #FFC718 #FE866B #58AAE4 #235391 #050E2D;
 
-$link-color:                nth($colors, 2);
+$brand-primary:             nth($colors, 2);
+
+$link-color:                $brand-primary;
 $link-hover-color:          nth($colors, 4);
 
 $font-family-sans-serif:    "signika negative", $helvetica;

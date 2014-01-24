@@ -2,15 +2,27 @@
   background-color: white;
   border-bottom: 1px solid shade(white, 10%);
 
-  i {
-    @include position(relative, -1px 0 0 0);
+  .container {
+    > * {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
-  a {
-    display: inline-block;
-    padding: $suh;
-    border-bottom: none;
-    line-height: $sub;
+  .l-fl {
+    i {
+      @include position(relative, -1px 0 0 0);
+    }
+
+    a {
+      display: inline-block;
+      padding: $suh;
+      border-bottom: none;
+
+      &:first-child {
+        line-height: $sub;
+      }
+    }
   }
 
   .active {
