@@ -8,7 +8,9 @@
     %link{rel: "authors", href: "humans.txt"}
     = favicon_link_tag
     = stylesheet_link_tag "application"
-    = render "javascript"
+    = render "js"
+    = render "webfonts"
+    = render "analytics"
     = csrf_meta_tags
 
   %body{class: "l-page-#{params[:controller]} l-page-#{params[:controller]}-#{params[:action]}"}
