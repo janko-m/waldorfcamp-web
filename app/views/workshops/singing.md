@@ -21,6 +21,8 @@ musical pieces are created or changed in a moment, depending on the
 individual’s technical background, which allows also to the musicians beginners
 to participate in choral performance.
 
+You can [download](/VanniMusicSheets.zip) music sheets from 2013.
+
 ## Workshop leader -- **Vanni Moretto**
 
 I am primarily involved in music, all kinds of music, regardless of the type or
