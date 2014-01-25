@@ -14,7 +14,7 @@
   }
 
   .workshop-single {
-    img {
+    img, .img {
       @extend .img-thumbnail;
       float: left;
       margin-right: $sub;

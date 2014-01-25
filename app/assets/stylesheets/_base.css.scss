@@ -12,6 +12,13 @@ h1 {
 }
 
 h2 {
+  margin-top: $sub;
+  font-weight: 300;
+
+  strong {
+    font-weight: 400;
+    color: #000;
+  }
 }
 
 h3 {

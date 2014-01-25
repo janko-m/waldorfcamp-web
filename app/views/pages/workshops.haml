@@ -4,11 +4,13 @@
   :markdown
     # Workshops
 
-    These are the workshops which have been held regularly since the beginning of the camp. So, besides these, we also had workshops for drama, archery, folk dances, drumming... you name it!
+    Some of these workshops may not be available this year, but we send invitations via e-mail containing up-to-date info about the upcoming camp, so you will always know which ones will be available.
 
-  .workshops.row
+    Besides these workshops, we also had workshops for drama, archery, folk dances, drumming... you name it!
+
+  .workshops.row.m-top
     - @workshops.each do |workshop|
-      .workshop.col-xs-6.col-md-3
+      .workshop.col-xs-6.col-md-4
         = link_to workshop_path(workshop), class: "#{workshop.name}" do
           = image_tag "workshops/navigation/#{workshop.name.downcase}.jpg", class: "img-thumbnail s-bottom-hl", alt: workshop
           %p= workshop

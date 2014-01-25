@@ -4,6 +4,8 @@ $colors:                    #FFC718 #FE866B #58AAE4 #235391 #050E2D;
 
 $brand-primary:             nth($colors, 2);
 
+$text-color:                rgba(#000, .75);
+
 $link-color:                $brand-primary;
 $link-hover-color:          nth($colors, 4);
 
