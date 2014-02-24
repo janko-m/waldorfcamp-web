@@ -1,17 +1,15 @@
-# African dances
+# Caxixi
 
-<div class="img">
-  <iframe width="420" height="315" src="//www.youtube.com/embed/bFABuq4ZWaQ"
-  frameborder="0" allowfullscreen></iframe>
-</div>
+For all of you who are interested in traditional instruments, Igor is
+organizing a Caxixi workshop. Caxixi is an old African instrument which was
+used by the old shamans to scare away evil spirits. Eventually it became a
+basic accompaniment and rhythmic base in almost all African percussion
+ensembles.
 
-This hot summer we will enjoy in african dances. In the last few years the
-African dances become a very popular form of fun and recreation also in other
-parts of the world! In Africa they are performed even today on the occasion of
-various events, such as initiation, birth, weddings, celebration of fruitful
-year…African dances are very energetic and joyful, include all muscle groups
-and are great fun and recreation for children and adults. Igor is eager to
-teach us new movements!
+The material is of such a nature that it can knit out any kind of forms. The
+bottom is made of the pumpkin and filled with some seeds that produce sound.
+Size varies from palm-sized to the size of basketballs. Prices are from 15 to
+30 €, depending on the size of the instrument.
 
 ## Workshop leader -- **Igor Šehić**
 

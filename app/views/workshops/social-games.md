@@ -1,17 +1,10 @@
-# African dances
+# Social games for children
 
-<div class="img">
-  <iframe width="420" height="315" src="//www.youtube.com/embed/bFABuq4ZWaQ"
-  frameborder="0" allowfullscreen></iframe>
-</div>
-
-This hot summer we will enjoy in african dances. In the last few years the
-African dances become a very popular form of fun and recreation also in other
-parts of the world! In Africa they are performed even today on the occasion of
-various events, such as initiation, birth, weddings, celebration of fruitful
-year…African dances are very energetic and joyful, include all muscle groups
-and are great fun and recreation for children and adults. Igor is eager to
-teach us new movements!
+With Igor fun never ends: guided and organized games for the smallest ones and
+for older children. In addition to creative and educational contents enriching
+our joint vacations, our favorite aim is to experience, together with our
+children, the joy of a regular human contact through live word, movement, music
+and other activities.
 
 ## Workshop leader -- **Igor Šehić**
 

@@ -11,6 +11,7 @@ WaldorfCamp::Application.routes.draw do
     get "gallery/:camp/(:page)", to: :gallery, as: :gallery
     delete "gallery/:camp/(:page)/expire_cache", to: :expire_cache, as: :expire_cache
     get "contact"
+    get "pricing"
   end
 
   # mount SendgridEmailForwarder::Engine, at: ""

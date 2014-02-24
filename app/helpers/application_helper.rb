@@ -4,7 +4,8 @@ module ApplicationHelper
              {:title => 'Location',  :route => "/location"},
              {:title => 'Workshops', :route => "/workshops"},
              {:title => 'Gallery',   :route => "/gallery"},
-             {:title => 'Contact',   :route => "/contact"}]
+             {:title => 'Contact',   :route => "/contact"},
+             {:title => 'Pricing',   :route => "/pricing"}]
 
     pages.map! do |page|
       page_class = Struct.new(:title, :route)

@@ -1,6 +1,7 @@
 .footer {
   @include font-size(14px);
   padding-top: $sub;
+  padding-bottom: $suh;
   border-top: 1px solid shade(white, 10%);
   color: shade(white, 40%);
 }

@@ -5,7 +5,7 @@ class Workshop
   attribute :description
 
   def title
-    name.capitalize
+    name.gsub("-", " ").capitalize
   end
 
   def to_param
