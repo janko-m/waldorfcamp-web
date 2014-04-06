@@ -1,5 +1,7 @@
 # Social games for children
 
+![Games in the water](/assets/workshops/navigation/social-games.jpg)
+
 With Igor fun never ends: guided and organized games for the smallest ones and
 for older children. In addition to creative and educational contents enriching
 our joint vacations, our favorite aim is to experience, together with our

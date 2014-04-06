@@ -1,5 +1,7 @@
 # Caxixi
 
+![Caxixi instruments](/assets/workshops/navigation/caxixi.jpg)
+
 For all of you who are interested in traditional instruments, Igor is
 organizing a Caxixi workshop. Caxixi is an old African instrument which was
 used by the old shamans to scare away evil spirits. Eventually it became a
