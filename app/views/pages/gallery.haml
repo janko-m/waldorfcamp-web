@@ -12,7 +12,7 @@
 
   .gallery.l-fl
     - @photos.each do |photo|
-      = link_to image_tag(photo.source_url), photo.largest.source_url, rel: "gallery", class: "fancybox"
+      = link_to "", photo.largest.source_url, rel: "gallery", class: "fancybox", style: "background-image: url(#{photo.source_url})"
 
   = will_paginate(@photos)
 

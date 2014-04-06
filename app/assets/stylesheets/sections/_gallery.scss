@@ -5,19 +5,22 @@ $img-height: 120px;
   margin-bottom: $sub;
 
   > * {
-    width: 50%;
+    width: 100/2 * 1%;
     height: $img-height;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
     border: 1px solid #fff;
     margin-right: -1px;
     margin-bottom: -1px;
     overflow: hidden;
 
     @media (min-width: $screen-xs-min) {
-      width: 33.3333333333%;
+      width: 100/3 * 1%;
     }
 
     @media (min-width: $screen-sm-min) {
-      width: 25%;
+      width: 100/4 * 1%;
     }
   }
 
