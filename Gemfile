@@ -11,6 +11,7 @@ group :assets do
   gem "bourbon"
   gem "coffee-rails"
   gem "uglifier"
+  gem "fancybox2-rails"
 end
 
 gem "jquery-rails"
