@@ -1,7 +1,7 @@
 - @title = "Gallery · #{@camp.title}"
 
 - content_for :navigation do
-  - @camps.each do |camp|
+  - @camps.reverse.each do |camp|
     = link_to_unless camp.title == @camp.title, camp.year, gallery_path(camp) do
       = link_to camp.year, gallery_path(camp), class: "active"
 

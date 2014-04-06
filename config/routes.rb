@@ -7,7 +7,7 @@ WaldorfCamp::Application.routes.draw do
     get "location"
     get "workshops"
     get "workshops/:workshop", to: :workshop, as: :workshop
-    get "gallery", to: redirect("/gallery/2001-badija")
+    get "gallery", to: redirect("/gallery/2013-olib")
     get "gallery/:camp/(:page)", to: :gallery, as: :gallery
     delete "gallery/:camp/(:page)/expire_cache", to: :expire_cache, as: :expire_cache
     get "contact"
