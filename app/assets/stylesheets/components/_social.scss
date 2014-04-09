@@ -16,6 +16,14 @@
   }
 }
 
+  .social-email {
+    color: $color-gmail;
+
+    #{$interact} {
+      background-color: $color-gmail;
+    }
+  }
+
   .social-facebook {
     color: $color-facebook;
 

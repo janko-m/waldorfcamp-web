@@ -18,7 +18,7 @@
 			"properties": {
 				"id": 249,
 				"order": 1,
-				"prevSize": 16,
+				"prevSize": 32,
 				"code": 57593,
 				"name": "compass",
 				"ligatures": ""
@@ -43,7 +43,7 @@
 			"properties": {
 				"id": 756,
 				"order": 2,
-				"prevSize": 16,
+				"prevSize": 32,
 				"code": 58100,
 				"name": "brightness-high",
 				"ligatures": ""
@@ -68,7 +68,7 @@
 			"properties": {
 				"id": 456,
 				"order": 3,
-				"prevSize": 16,
+				"prevSize": 32,
 				"code": 57800,
 				"name": "expand",
 				"ligatures": ""
@@ -94,7 +94,7 @@
 			"properties": {
 				"id": 662,
 				"order": 4,
-				"prevSize": 16,
+				"prevSize": 32,
 				"code": 58006,
 				"name": "signup",
 				"ligatures": ""
@@ -117,7 +117,7 @@
 			"properties": {
 				"id": 1171,
 				"order": 5,
-				"prevSize": 16,
+				"prevSize": 32,
 				"code": 58515,
 				"name": "googleplus",
 				"ligatures": ""
@@ -140,7 +140,7 @@
 			"properties": {
 				"id": 1176,
 				"order": 6,
-				"prevSize": 16,
+				"prevSize": 32,
 				"code": 58520,
 				"name": "facebook",
 				"ligatures": ""
@@ -164,7 +164,7 @@
 			"properties": {
 				"id": 1181,
 				"order": 7,
-				"prevSize": 16,
+				"prevSize": 32,
 				"code": 58525,
 				"name": "twitter",
 				"ligatures": ""
@@ -187,7 +187,7 @@
 			"properties": {
 				"id": 1187,
 				"order": 8,
-				"prevSize": 16,
+				"prevSize": 32,
 				"code": 58531,
 				"name": "youtube",
 				"ligatures": ""
@@ -210,13 +210,39 @@
 			"properties": {
 				"id": 1194,
 				"order": 9,
-				"prevSize": 16,
+				"prevSize": 32,
 				"code": 58538,
 				"name": "flickr",
 				"ligatures": ""
 			},
 			"setIdx": 0,
 			"iconIdx": 1194
+		},
+		{
+			"icon": {
+				"paths": [
+					"M651.216 530.364l372.784 257.108v-591.894zM0 195.578v591.894l372.776-257.144zM512 655.382l-89.002-79.91-422.998 256.528h1024l-423.010-256.528zM993.28 192h-962.56l481.28 361.852z"
+				],
+				"tags": [
+					"envelop",
+					"mail",
+					"email",
+					"contact",
+					"letter"
+				],
+				"defaultCode": 57580,
+				"grid": 16
+			},
+			"properties": {
+				"id": 236,
+				"order": 10,
+				"prevSize": 32,
+				"code": 57580,
+				"name": "envelop",
+				"ligatures": ""
+			},
+			"setIdx": 0,
+			"iconIdx": 236
 		}
 	],
 	"height": 1024,
