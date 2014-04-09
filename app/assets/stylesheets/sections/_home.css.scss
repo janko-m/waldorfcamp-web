@@ -17,20 +17,20 @@
 }
 
 .apply {
-  @include linear-gradient(
-    to bottom,
-    rgba(#000, 0.0) 0%,
-    rgba(#000, 0.0) 45%,
-    rgba(#000, 0.15) 0,
-    rgba(#000, 0.15) 47%,
-    rgba(#000, 0.0) 0,
-    rgba(#000, 0.0) 53%,
-    rgba(#000, 0.15) 0,
-    rgba(#000, 0.15) 55%,
-    rgba(#000, 0.0) 0,
-    rgba(#000, 0.0) 100%,
-    $fallback: transparent
-  );
+  // @include linear-gradient(
+  //   to bottom,
+  //   rgba(#000, 0.0) 0%,
+  //   rgba(#000, 0.0) 45%,
+  //   rgba(#000, 0.15) 0,
+  //   rgba(#000, 0.15) 47%,
+  //   rgba(#000, 0.0) 0,
+  //   rgba(#000, 0.0) 53%,
+  //   rgba(#000, 0.15) 0,
+  //   rgba(#000, 0.15) 55%,
+  //   rgba(#000, 0.0) 0,
+  //   rgba(#000, 0.0) 100%,
+  //   $fallback: transparent
+  // );
   margin-top: $sub;
   margin-bottom: $sub;
   text-align: center;
