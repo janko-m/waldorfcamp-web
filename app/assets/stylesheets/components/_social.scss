@@ -1,0 +1,54 @@
+.social {
+  padding: $suh;
+  font-family: "icomoon";
+  font-size: 32px;
+  line-height: 1;
+
+  a {
+    display: inline-block;
+    padding: $suh/2;
+    border-bottom: none;
+    border-radius: 50%;
+
+    #{$interact} {
+      color: #fff;
+    }
+  }
+}
+
+  .social-facebook {
+    color: $color-facebook;
+
+    #{$interact} {
+      background-color: $color-facebook;
+    }
+  }
+
+  .social-twitter {
+    color: $color-twitter;
+
+    #{$interact} {
+      background-color: $color-twitter;
+    }
+  }
+
+  .social-google-plus {
+    color: $color-google-plus;
+
+    #{$interact} {
+      background-color: $color-google-plus;
+    }
+
+    i {
+      position: relative;
+      left: 2px;
+    }
+  }
+
+  .social-youtube {
+    color: $color-youtube;
+
+    #{$interact} {
+      background-color: $color-youtube;
+    }
+  }
