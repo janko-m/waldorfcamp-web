@@ -52,3 +52,13 @@
       background-color: $color-youtube;
     }
   }
+
+  .social-flickr {
+    @include transform(rotate(0deg));
+    color: $color-flickr-blue;
+
+    #{$interact} {
+      @include transform(rotate(180deg));
+      background-color: $color-flickr-pink;
+    }
+  }
