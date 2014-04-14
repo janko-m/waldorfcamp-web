@@ -15,11 +15,11 @@ class PagesController < ApplicationController
   end
 
   def workshops
-    @workshops = Workshop.all.reject { |w| w.name == "circus" }
+    @workshops = Workshop.all
   end
 
   def workshop
-    @workshops = Workshop.all.reject { |w| w.name == "circus" }
+    @workshops = Workshop.all
     @workshop = Workshop.find(params[:workshop])
   end
 
