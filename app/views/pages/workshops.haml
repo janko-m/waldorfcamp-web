@@ -16,7 +16,7 @@
 
   .workshops.row.m-top
     - @workshops.each do |workshop|
-      .workshop.col-xs-6.col-md-4
+      .workshop.col-xs-6.col-md-4{class: "workshop-#{workshop.type}"}
         = link_to workshop_path(workshop), class: "#{workshop.name}" do
-          = image_tag "workshops/navigation/#{workshop.name.downcase}.jpg", class: "img-thumbnail s-bottom-hl", alt: workshop
+          = image_tag "workshops/navigation/#{workshop.name}.jpg", class: "img-thumbnail s-bottom-hl", alt: workshop
           %p= workshop

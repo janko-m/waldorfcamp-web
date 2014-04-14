@@ -16,6 +16,22 @@ class Workshop
     title
   end
 
+  def regular?
+    type == "regular"
+  end
+
+  def extra?
+    type == "extra"
+  end
+
+  def type
+    if name.in? %w[painting caxixi archery]
+      "extra"
+    else
+      "regular"
+    end
+  end
+
   def self.all
     Dir["#{Rails.root}/app/views/workshops/*.md"].map do |filename|
       name = File.basename(filename).chomp(".md")
