@@ -16,57 +16,28 @@
   }
 }
 
-  .social-email {
-    color: $color-gmail;
+  @each $network, $color in $network-colors {
+    .social-#{$network} {
+      color: $color;
 
-    #{$interact} {
-      background-color: $color-gmail;
-    }
-  }
-
-  .social-facebook {
-    color: $color-facebook;
-
-    #{$interact} {
-      background-color: $color-facebook;
-    }
-  }
-
-  .social-twitter {
-    color: $color-twitter;
-
-    #{$interact} {
-      background-color: $color-twitter;
+      #{$interact} {
+        background-color: $color;
+      }
     }
   }
 
   .social-google-plus {
-    color: $color-google-plus;
-
-    #{$interact} {
-      background-color: $color-google-plus;
-    }
-
     i {
       position: relative;
       left: 2px;
     }
   }
 
-  .social-youtube {
-    color: $color-youtube;
-
-    #{$interact} {
-      background-color: $color-youtube;
-    }
-  }
-
-  .social-flickr {
+  .social-flickr-blue {
     @include transform(rotate(0deg));
-    color: $color-flickr-blue;
 
     #{$interact} {
       @include transform(rotate(180deg));
-      background-color: $color-flickr-pink;
+      background-color: map-get($network-colors, "flickr-pink");
     }
   }

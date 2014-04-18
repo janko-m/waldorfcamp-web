@@ -12,18 +12,20 @@ $interact:          "&:hover, &:focus";
 
 // colors
 
-$color-facebook:        #3b5998;
-$color-twitter:         #00aced;
-$color-google-plus:     #da2713;
-$color-vimeo:           #1bb7ea;
-$color-youtube:         #e14d40;
-$color-github:          #000000;
-$color-gmail:           #d72c2c;
-$color-linked-in:       #0274b3;
-$color-instagram:       #2c6e8e;
-$color-vine:            #00a478;
-$color-dribbble:        #df4c85;
-$color-behance:         #000000;
-$color-flickr-blue:     #1e65d9;
-$color-flickr-pink:     #fc1486;
-$color-soundcloud:      #ff631c;
+$network-colors: (
+  facebook:    #3b5998,
+  twitter:     #00aced,
+  google-plus: #da2713,
+  vimeo:       #1bb7ea,
+  youtube:     #e14d40,
+  github:      #000000,
+  gmail:       #d72c2c,
+  linked-in:   #0274b3,
+  instagram:   #2c6e8e,
+  vine:        #00a478,
+  dribbble:    #df4c85,
+  behance:     #000000,
+  flickr-blue: #1e65d9,
+  flickr-pink: #fc1486,
+  soundcloud:  #ff631c
+);
