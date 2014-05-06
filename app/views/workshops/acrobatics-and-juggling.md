@@ -3,12 +3,11 @@
 ![Danijel and children doing
 acrobatics](/assets/workshops/acrobatics-and-juggling.jpg)
 
-The first part of this unit will be dedicatet to some general fisical
-movements.
+In the first part of this workshop we will practice some general physical
+movements. Then we will start practicing acrobatics from the basic exercices to
+more dificult ones, depending on how we feel and how well we prepare our bodies
+– the muscles need to learn to be in tension at the right moment and to find the
+balance between different movements.
 
-Practicing acrobatics from the basic exercices until maybe more dificult ones,
-we are feeling and tuning our body, the muscles learn to be in tension at the
-right moment and finding the balance between different movements.
-
-At the juggling exercises we care about the rythm and practice throwing and
-catching elements  at individual and collective figures.
+On the juggling exercises we will pay attention to the rhythm and practice
+throwing and catching elements at individual and collective figures.
