@@ -13,6 +13,30 @@
     }
   }
 
+  .workshop-extra {
+    a {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        content: "\e601"; // money
+        font-family: "icomoon";
+        display: inline-block;
+        padding: 0 6px;
+        color: $brand-primary;
+        background-color: #fff;
+        border-bottom-left-radius: 4px;
+        border-top-right-radius: 4px;
+        font-size: 32px;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
+
   .workshop-single {
     img, .img {
       @extend .img-thumbnail;
