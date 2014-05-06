@@ -1,32 +1,58 @@
+
 .navigation {
   background-color: white;
   border-bottom: 1px solid shade(white, 10%);
+  text-align: center;
 
-  .container {
-    > * {
+  @media (min-width: $screen-sm-min) {
+    text-align: left;
+  }
+
+  a {
+    display: inline-block;
+    padding: $suh/2;
+    border-bottom: none;
+    vertical-align: middle;
+    line-height: inherit;
+
+    @media (min-width: $screen-sm-min) {
+      padding: $suh $suh/2;
+    }
+
+    @media (min-width: $nav-breakpoint) {
+      padding: $suh;
+      float: left;
+    }
+  }
+
+  .navigation-links,
+  .navigation-buttons {
+    display: block;
+
+    @media (min-width: $screen-sm-min) {
       display: inline-block;
       vertical-align: middle;
     }
   }
 
-  .l-fl {
-    i {
-      @include position(relative, -1px 0 0 0);
-    }
-
-    a {
-      display: inline-block;
-      padding: $suh;
-      border-bottom: none;
-
-      &:first-child {
-        line-height: $sub;
-      }
-    }
+  .navigation-logo i {
+    @include position(relative, -1px 0 0 0);
   }
 
   .active {
     font-weight: nth($base-weight, 3);
     color: $link-hover-color;
+  }
+
+  .btn {
+    margin-bottom: $suh;
+
+    i {
+      @include position(relative, 1px 0 0 0);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 0;
+    }
   }
 }

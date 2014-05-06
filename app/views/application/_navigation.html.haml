@@ -1,8 +1,12 @@
 %nav.navigation
-  .container
-    .l-fl
-      = link_to icon("brightness-high"), root_path, class: "icon-container"
+  .container.clearfix
+    .navigation-links.clearfix
+      = link_to icon("brightness-high"), root_path, class: "icon-container navigation-logo"
       - navigation_pages.each do |page|
         = link_to_unless_current page.title, page.route do
           = link_to page.title, page.route, class: "active"
-    = link_to "Apply for participation".prepend_icon("signup"), "https://docs.google.com/forms/d/1X4U6EAYEwrsEIZbAVvgG2QMySQd9P8kihATPlkhFPcY/viewform", class: "btn btn-primary", target: "_blank"
+
+    .navigation-buttons
+      .btn-group.btn-group-sm
+        = link_to "Participate".prepend_icon("signup"), "https://docs.google.com/forms/d/1X4U6EAYEwrsEIZbAVvgG2QMySQd9P8kihATPlkhFPcY/viewform", class: "btn btn-primary", target: "_blank"
+        = link_to "Receive news".prepend_icon("envelop"), "http://eepurl.com/M7N7T", class: "btn btn-primary", target: "_blank"
