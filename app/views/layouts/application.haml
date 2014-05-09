@@ -5,6 +5,14 @@
     %title #{@title} · Waldorf Camp
     %meta{http_equiv: "X-UA-Compatibile", content: "IE=edge,chrome=1"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %link{rel: "apple-touch-icon-precomposed", href: "/assets/icons/app-152.png"}
+    - [152, 144, 120, 114, 72].each do |size|
+      %link{rel: "apple-touch-icon-precomposed", sizes: "#{size}x#{size}", href: "/assets/icons/app-#{size}.png"}
+    %link{rel: "apple-touch-icon-precomposed", href: "/assets/icons/app-57.png"}
+    - [32, 96, 128, 195, 228].each do |size|
+      %link{rel: "icon", sizes: "#{size}x#{size}", href: "/assets/icons/app-#{size}.png"}
+    %meta{name: "msapplication-TileColor", content: "#FFFFFF"}
+    %meta{name: "msapplication-TileImage", content: "/assets/icons/app-144.png"}
     %link{rel: "authors", href: "humans.txt"}
     = render "google"
     = stylesheet_link_tag "application"
