@@ -7,6 +7,5 @@
           = link_to page.title, page.route, class: "active"
 
     .navigation-buttons
-      .btn-group.btn-group-sm
-        = link_to "Participate".prepend_icon("signup"), "https://docs.google.com/forms/d/1X4U6EAYEwrsEIZbAVvgG2QMySQd9P8kihATPlkhFPcY/viewform", class: "btn btn-primary", target: "_blank"
-        = link_to "Receive news".prepend_icon("envelop"), "http://eepurl.com/M7N7T", class: "btn btn-primary", target: "_blank"
+      = link_to "Receive news".prepend_icon("envelop"), "http://eepurl.com/M7N7T", class: "btn btn-sm btn-info", target: "_blank"
+      = link_to "Participate".prepend_icon("signup"), "https://docs.google.com/forms/d/1X4U6EAYEwrsEIZbAVvgG2QMySQd9P8kihATPlkhFPcY/viewform", class: "btn btn-sm btn-primary", target: "_blank"

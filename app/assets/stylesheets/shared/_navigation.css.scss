@@ -8,23 +8,6 @@
     text-align: left;
   }
 
-  a {
-    display: inline-block;
-    padding: $suh/2;
-    border-bottom: none;
-    vertical-align: middle;
-    line-height: inherit;
-
-    @media (min-width: $screen-sm-min) {
-      padding: $suh $suh/2;
-    }
-
-    @media (min-width: $nav-breakpoint) {
-      padding: $suh;
-      float: left;
-    }
-  }
-
   .navigation-links,
   .navigation-buttons {
     display: block;
@@ -32,6 +15,25 @@
     @media (min-width: $screen-sm-min) {
       display: inline-block;
       vertical-align: middle;
+    }
+  }
+
+  .navigation-links {
+    a {
+      display: inline-block;
+      padding: $suh/2;
+      border-bottom: none;
+      vertical-align: middle;
+      line-height: inherit;
+
+      @media (min-width: $screen-sm-min) {
+        padding: $suh $suh/2;
+      }
+
+      @media (min-width: $nav-breakpoint) {
+        padding: $suh;
+        float: left;
+      }
     }
   }
 
@@ -44,7 +46,7 @@
     color: $link-hover-color;
   }
 
-  .btn {
+  .navigation-buttons {
     margin-bottom: $suh;
 
     i {
