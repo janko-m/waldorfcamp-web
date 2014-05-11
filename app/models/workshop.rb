@@ -33,8 +33,8 @@ class Workshop
   end
 
   def self.all
-    Dir["#{Rails.root}/app/views/workshops/*.md"].map do |filename|
-      name = File.basename(filename).chomp(".md")
+    Dir["#{Rails.root}/app/views/workshops/*.md.erb"].map do |filename|
+      name = File.basename(filename).chomp(".md.erb")
       find(name)
     end
   end
@@ -42,6 +42,6 @@ class Workshop
   def self.find(name)
     new \
       name: name,
-      description: File.read("#{Rails.root}/app/views/workshops/#{name}.md")
+      description: File.read("#{Rails.root}/app/views/workshops/#{name}.md.erb")
   end
 end

@@ -1,3 +1,5 @@
+require "erb"
+
 module ApplicationHelper
   def navigation_pages
     pages = [{:title => 'About',     :route => "/about"},
@@ -22,6 +24,7 @@ module ApplicationHelper
   end
 
   def render_markdown(text)
+    text = ERB.new(text).result(binding)
     MyMarkdown.render(text).html_safe
   end
 end
