@@ -20,7 +20,7 @@ gem "haml", ">= 4"
 gem "haml-rails"
 gem "redcarpet"
 
-gem "flickrie"
+gem "flickrie", ">= 1.6.1"
 gem "will_paginate"
 gem "active_attr"
 
