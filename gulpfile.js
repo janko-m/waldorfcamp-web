@@ -6,6 +6,16 @@ var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
+gulp.task('views', function () {
+  return gulp.src([
+    'app/**/*.{html,md}',
+    '!app/default.html'
+  ]).pipe($.frontMatter())
+    .pipe($.if('*.md', $.markdown({smartypants: true})))
+    .pipe($.wrap({src: 'app/default.html'}))
+    .pipe(gulp.dest('.tmp'));
+});
+
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
     .pipe($.sourcemaps.init())
@@ -31,10 +41,10 @@ gulp.task('jshint', function () {
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
-gulp.task('html', ['styles'], function () {
+gulp.task('html', ['views', 'styles'], function () {
   var assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  return gulp.src('app/*.html')
+  return gulp.src('.tmp/*.html')
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.csso()))
@@ -75,7 +85,7 @@ gulp.task('extras', function () {
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'fonts'], function () {
+gulp.task('serve', ['views', 'styles', 'fonts'], function () {
   browserSync({
     notify: false,
     port: 9000,
@@ -90,12 +100,13 @@ gulp.task('serve', ['styles', 'fonts'], function () {
 
   // watch for changes
   gulp.watch([
-    'app/*.html',
+    '.tmp/**/*.html',
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/**/*.{html,md}', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
