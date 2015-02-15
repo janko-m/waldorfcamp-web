@@ -15,9 +15,8 @@ gulp.task('styles', function () {
       includePaths: ['.'],
       onError: console.error.bind(console, 'Sass error:')
     }))
-    .pipe($.sourcemaps.init())
     .pipe($.postcss([
-      require('autoprefixer-core')({browsers: ['last 1 version']})
+      require('autoprefixer-core')({browsers: ['last 3 versions']})
     ]))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
@@ -80,6 +79,7 @@ gulp.task('serve', ['styles', 'fonts'], function () {
   browserSync({
     notify: false,
     port: 9000,
+    open: false,
     server: {
       baseDir: ['.tmp', 'app'],
       routes: {
