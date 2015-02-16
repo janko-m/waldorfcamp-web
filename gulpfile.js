@@ -8,11 +8,11 @@ var reload = browserSync.reload;
 
 gulp.task('views', function () {
   return gulp.src([
-    'app/**/*.{html,md}',
-    '!app/default.html'
+    'app/views/**/*.{html,md}',
+    '!app/views/default.html'
   ]).pipe($.frontMatter())
     .pipe($.if('*.md', $.markdown({smartypants: true})))
-    .pipe($.wrap({src: 'app/default.html'}))
+    .pipe($.wrap({src: 'app/views/default.html'}))
     .pipe(gulp.dest('.tmp'));
 });
 
@@ -106,7 +106,7 @@ gulp.task('serve', ['views', 'styles', 'fonts'], function () {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/**/*.{html,md}', ['views']);
+  gulp.watch('app/views/**/*.{html,md}', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);

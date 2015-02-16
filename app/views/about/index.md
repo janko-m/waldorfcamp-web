@@ -1,0 +1,15 @@
+---
+title: About
+description: Waldorf Camp is a summer vacation opportunity where you and your kids can spend time in a safe natural environment, meeting new people and participating in various workshops.
+id: about
+---
+
+# What is Waldorf camp?
+
+A group of friends, consisting of about 20 families from Croatia, Austria, Italy, Macedonia, Great Britain, Norway and Slovenia, have been gathering for the past 12 years to spend a summer vacation together. During the first 5 years we've been staying on **Badija**, then 3 years on **Iž**, a year on **Silba** and lately we've been staying on [Olib](/location).
+
+Besides enjoying our summer vacation in a clean, quiet and safe natural environment, we are giving our children the opportunity to spend time and make friends with other children from different countries, encouraging them to learn and get comfortable with foreign languages, which develops tolerance and interest towards others, their lifestyle and culture. This all happens in a spontaneous and natural way through participating in various games and artistic, physical and ecological activities. Being aware of the traditional ways of social interaction getting close to extinction, we are doing our best to show our children the joy that can come out of ordinary human interaction through live word, movement, community work etc.
+
+All activities include parents and children. Such social interaction in which parents and children acknowledge each other in new way, as partners in having fun and creating in a happy and playful environment, strengthens the bond between them in the most beautiful way and creates a strong, warm imprint in their memories.
+
+After about 12 years of informal association which gathers more than 200 participants, we founded an organization called **Kvija**, which sets solid ground for developing similar projects that encourage intergenerational and international bonding using the power of art in the sense of "producing" our own culture and ways of having fun.
