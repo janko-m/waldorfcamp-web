@@ -76,11 +76,9 @@ gulp.task('fonts', function () {
 
 gulp.task('extras', function () {
   return gulp.src([
-    'app/*.*',
-    '!app/*.html'
-  ], {
-    dot: true
-  }).pipe(gulp.dest('dist'));
+    'favicon.icon',
+    'robots.txt'
+  ]).pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
