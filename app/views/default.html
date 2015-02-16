@@ -24,7 +24,7 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <nav role="navigation">
+    <nav class="navigation" role="navigation">
       <ol>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
@@ -39,13 +39,13 @@
       <a href="https://docs.google.com/forms/d/1X4U6EAYEwrsEIZbAVvgG2QMySQd9P8kihATPlkhFPcY/viewform">Participate</a>
     </nav>
 
-    <main role="main">
+    <main class="main" role="main">
 
       <%= contents %>
 
     </main>
 
-    <footer role="contentinfo">
+    <footer class="footer" role="contentinfo">
       Design &amp; development by <a href="http://twin.github.io">Janko &amp; Matija Marohnić</a>. Photography by Jadranka Marohnić, Željko Marohnić and Ana Božić.
 
       <ul>
@@ -61,8 +61,13 @@
     <!-- build:js scripts/main.js -->
     <!-- bower:js -->
     <script src="/bower_components/flickrapi/browser/flickrapi.js"></script>
+    <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/eventEmitter/EventEmitter.js"></script>
+    <script src="/bower_components/eventie/eventie.js"></script>
+    <script src="/bower_components/imagesloaded/imagesloaded.js"></script>
     <!-- endbower -->
 
+    <script src="/scripts/gallery.js"></script>
     <!-- endbuild -->
   </body>
 </html>

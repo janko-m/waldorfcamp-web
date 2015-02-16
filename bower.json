@@ -1,5 +1,9 @@
 {
   "name": "waldorfcamp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "flickrapi": "~0.3.29",
+    "lodash": "~3.2.0",
+    "imagesloaded": "~3.1.8"
+  }
 }
