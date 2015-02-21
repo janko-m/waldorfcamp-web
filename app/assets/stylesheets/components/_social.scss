@@ -34,10 +34,7 @@
   }
 
   .social-flickr-blue {
-    @include transform(rotate(0deg));
-
     #{$interact} {
-      @include transform(rotate(180deg));
       background-color: map-get($network-colors, "flickr-pink");
     }
   }
