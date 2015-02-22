@@ -13,6 +13,12 @@ gulp.task('views', function () {
   ]).pipe($.frontMatter())
     .pipe($.if('*.md', $.markdown({smartypants: true})))
     .pipe($.wrap({src: 'app/views/default.html'}))
+    .pipe($.rename(function (path) {
+      if (path.basename !== 'index') {
+        path.dirname += '/' + path.basename;
+        path.basename = 'index';
+      }
+    }))
     .pipe(gulp.dest('.tmp'));
 });
 
