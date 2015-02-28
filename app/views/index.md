@@ -120,4 +120,4 @@ workshop. Caxixi is an old African instrument which was used by the old
 shamans to scare away evil spirits. Eventually it became a basic
 accompaniment and rhythmic base in almost all African percussion ensembles.
 
-[Apply for participation](https://docs.google.com/forms/d/1X4U6EAYEwrsEIZbAVvgG2QMySQd9P8kihATPlkhFPcY/viewform)
+[Apply for participation](https://docs.google.com/forms/d/1cQIyvfsGTy_K0frFLOO6siQK34gD1zJOe7MS5kwtS84/viewform)
