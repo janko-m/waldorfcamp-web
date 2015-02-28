@@ -38,6 +38,10 @@
         img.width = photo.width_z;
         img.height = photo.height_z;
         img.alt = photo.title;
+        img.style.opacity = '0';
+        img.onload = function () {
+          this.style.opacity = '1';
+        }
 
         a.href = photo.url_l;
 

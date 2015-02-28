@@ -1,0 +1,26 @@
+.page-gallery .main ol {
+  @extend .list-unstyled;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  li {
+    flex: 0 0 (100%/3);
+    padding: 0.25em;
+    height: 20em;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#000, 0.1);
+    overflow: hidden;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+img, svg, iframe {
+  vertical-align: middle;
+}
