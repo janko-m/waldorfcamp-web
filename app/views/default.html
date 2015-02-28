@@ -26,37 +26,49 @@
     <![endif]-->
 
     <nav class="navigation" role="navigation">
-      <ol>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/location">Location</a></li>
-        <li><a href="/workshops">Workshops</a></li>
-        <li><a href="/gallery">Gallery</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/pricing">Pricing</a></li>
-      </ol>
+      <div class="container row">
+        <a href="/">Waldorf Camp</a>
 
-      <a href="http://eepurl.com/M7N7T">Receive news</a>
-      <a href="https://docs.google.com/forms/d/1cQIyvfsGTy_K0frFLOO6siQK34gD1zJOe7MS5kwtS84/viewform">Participate</a>
+        <div class="row">
+          <ol class="navigation-list row">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/location">Location</a></li>
+            <li><a href="/workshops">Workshops</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+          </ol>
+
+          <div class="navigation-actions row">
+            <a href="http://eepurl.com/M7N7T">Receive news</a>
+            <a href="https://docs.google.com/forms/d/1cQIyvfsGTy_K0frFLOO6siQK34gD1zJOe7MS5kwtS84/viewform">Participate</a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <main class="main" role="main">
+      <div class="container">
 
-      <%= contents %>
+        <%= contents %>
 
+      </div>
     </main>
 
     <footer class="footer" role="contentinfo">
-      Design &amp; development by <a href="http://twin.github.io">Janko &amp; Matija Marohnić</a>. Photography by Jadranka Marohnić, Željko Marohnić and Ana Božić.
+      <div class="container">
+        Design &amp; development by <a href="http://twin.github.io">Janko &amp; Matija Marohnić</a>. Photography by Jadranka Marohnić, Željko Marohnić and Ana Božić.
 
-      <ul>
-        <li><a href="mailto:camp.waldorf@gmail.com">Email</a></li>
-        <li><a href="https://facebook.com/waldorfcamp">Facebook</a></li>
-        <li><a href="https://twitter.com/waldorfcamp">Twitter</a></li>
-        <li><a href="https://plus.google.com/114689702792346575599">Google Plus</a></li>
-        <li><a href="https://www.youtube.com/channel/UCJSkP0RNskbgly3W4gvoOaw">YouTube</a></li>
-        <li><a href="https://www.flickr.com/photos/waldorfcamp">Flickr</a></li>
-      </ul>
+        <ul>
+          <li><a href="mailto:camp.waldorf@gmail.com">Email</a></li>
+          <li><a href="https://facebook.com/waldorfcamp">Facebook</a></li>
+          <li><a href="https://twitter.com/waldorfcamp">Twitter</a></li>
+          <li><a href="https://plus.google.com/114689702792346575599">Google Plus</a></li>
+          <li><a href="https://www.youtube.com/channel/UCJSkP0RNskbgly3W4gvoOaw">YouTube</a></li>
+          <li><a href="https://www.flickr.com/photos/waldorfcamp">Flickr</a></li>
+        </ul>
+      </div>
     </footer>
 
     <!-- build:js scripts/main.js -->

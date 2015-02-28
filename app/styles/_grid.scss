@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  @include center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
