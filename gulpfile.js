@@ -85,7 +85,7 @@ gulp.task('serve', ['views', 'styles', 'fonts'], function () {
   browserSync({
     notify: false,
     port: 9000,
-    open: false,
+    browser: 'google chrome',
     server: {
       baseDir: ['.tmp', 'app'],
       routes: {
