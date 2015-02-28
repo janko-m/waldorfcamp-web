@@ -76,6 +76,7 @@
     viewHeight = window.innerHeight;
   }, 300));
 
+  container.innerHTML = '';
   container.appendChild(photos);
 
   // initial load
