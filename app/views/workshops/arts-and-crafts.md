@@ -1,10 +1,10 @@
 ---
-title: Painting
+title: Arts & Crafts
 type: workshops
 description: Painting with acrylic colors will help you to learn about shadows, colors, volume, light, realistic and abstract style, working from both observation and imagination.
 ---
 
-# Painting
+# Arts & Crafts
 
 Petar will never teach you how to move you brush or take care about perspective, but he will definitely discover a real and hidden artist in you! Painting with acrylic colors will help you to learn about shadows, colors, volume, light, realistic and abstract style, working from both observation and imagination. Also you will create art by combining different materials collected around us (at the beaches!) and transformed into art by our imagination, freedom and joy! Since Petar plans to vary different art media, maybe you will learn about the medium of clay, how to use it artistically, and the exciting possibilities it holds for us. Petar's workshops always focus on process rather than "perfect" results.
 

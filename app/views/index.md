@@ -79,7 +79,7 @@ and relax your body, while the breathing exercises activate our vital
 energy. The power of yoga healing will increase your memory power,
 enthusiasm, and positive approach to life.
 
-### [Art Workshop](/workshops/painting)
+### [Arts & Crafts](/workshops/arts-and-crafts)
 
 Petar will never teach you how to move you brush or take care about
 perspective, but he will definitely discover a real and hidden artist in

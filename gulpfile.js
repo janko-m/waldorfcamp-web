@@ -74,7 +74,8 @@ gulp.task('fonts', function () {
 
 gulp.task('extras', function () {
   return gulp.src([
-    'favicon.icon',
+    'favicon.ico',
+    '.htaccess',
     'robots.txt'
   ]).pipe(gulp.dest('dist'));
 });

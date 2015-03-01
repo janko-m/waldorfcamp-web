@@ -6,7 +6,7 @@ id: workshops
 
 # Workshops
 
-We have prepared workshops for children and parents: painting, African
+We have prepared workshops for children and parents: arts & crafts, African
 dances, yoga, Croatian language course, music workshops, treasure hunt,
 social games and games in the sea and outdoor. Some of our activities and
 gathering will take place in a local play yard near the restaurant and some
@@ -23,6 +23,6 @@ nations and to teach others about your country!
 - [Croatian language](croatian-language)
 - [Social games](social-games)
 - [Singing](singing)
-- [Painting](painting)
+- [Arts & Crafs](arts-and-crafts)
 - [Archery](archery)
 - [Caxixi](caxixi)
