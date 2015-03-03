@@ -25,7 +25,7 @@ class Workshop
   end
 
   def type
-    if name.in? %w[painting caxixi archery]
+    if name.in? %w[arts-and-crafts caxixi archery]
       "extra"
     else
       "regular"
