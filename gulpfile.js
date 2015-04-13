@@ -4,7 +4,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
-var reload = browserSync.reload;
 
 gulp.task('views', function () {
   return gulp.src('app/views/**/*.{html,md}')
@@ -34,7 +33,7 @@ gulp.task('styles', function () {
     ]))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
-    .pipe(reload({stream: true}));
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('html', ['views', 'styles'], function () {
@@ -99,7 +98,7 @@ gulp.task('serve', ['views', 'styles', 'fonts'], function () {
     'app/scripts/**/*.js',
     'app/images/**/*',
     '.tmp/fonts/**/*'
-  ]).on('change', reload);
+  ]).on('change', browserSync.reload);
 
   gulp.watch('app/{views,layouts}/**/*.{html,md}', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
