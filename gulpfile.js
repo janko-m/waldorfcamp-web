@@ -7,12 +7,10 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 gulp.task('views', function () {
-  return gulp.src([
-    'app/views/**/*.{html,md}',
-    '!app/views/default.html'
-  ]).pipe($.frontMatter({property: 'data'}))
+  return gulp.src('app/views/**/*.{html,md}')
+    .pipe($.frontMatter({property: 'data'}))
     .pipe($.if('*.md', $.markdown({smartypants: true})))
-    .pipe($.wrap({src: 'app/views/default.html'}))
+    .pipe($.wrap({src: 'app/layouts/default.html'}))
     .pipe($.rename(function (path) {
       if (path.basename !== 'index') {
         path.dirname += '/' + path.basename;
@@ -103,7 +101,7 @@ gulp.task('serve', ['views', 'styles', 'fonts'], function () {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/views/**/*.{html,md}', ['views']);
+  gulp.watch('app/{views,layouts}/**/*.{html,md}', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
