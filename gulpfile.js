@@ -10,7 +10,7 @@ gulp.task('views', function () {
   return gulp.src([
     'app/views/**/*.{html,md}',
     '!app/views/default.html'
-  ]).pipe($.frontMatter())
+  ]).pipe($.frontMatter({property: 'data'}))
     .pipe($.if('*.md', $.markdown({smartypants: true})))
     .pipe($.wrap({src: 'app/views/default.html'}))
     .pipe($.rename(function (path) {
