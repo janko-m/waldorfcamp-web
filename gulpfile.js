@@ -62,11 +62,8 @@ gulp.task('images', function () {
 });
 
 gulp.task('extras', function () {
-  return gulp.src([
-    'favicon.ico',
-    '.htaccess',
-    'robots.txt'
-  ]).pipe(gulp.dest('dist'));
+  return gulp.src('app/*.*', {dot: true})
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
