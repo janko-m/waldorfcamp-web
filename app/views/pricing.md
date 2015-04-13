@@ -8,7 +8,7 @@ id: pricing
 
 ## Participation fee
 
-Participation fee which includes attendance to an unlimited number of workshops is 110 € per person, including children aged between 5 and 18. If you are staying 4 days or shorter, and don’t attend any workshop, the participation fee is optionaly. Participation fees should be paid into the Kvija’s bank account (before 15 April, 2014!).
+Participation fee for two weeks, which includes attendance to an unlimited number of workshops, is 110 € per person and the third week costs 60 €, including children aged between 5 and 18. Participation fees should be paid into the Kvija’s bank account.
 
 Families with two, three or more children may have following discounts for participation fee:
 

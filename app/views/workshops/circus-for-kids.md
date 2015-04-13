@@ -1,10 +1,10 @@
 ---
-title: Circus for kids
+title: Circus for Kids
 type: workshops
 description: We will have a lot of fun practicing circus skills like acrobatics, juggling, balancing, clowning and a few magic tricks.
 ---
 
-# Circus for kids
+# Circus for Kids
 
 We will have a lot of fun practicing circus skills like acrobatics, juggling, balancing, clowning and a few magic tricks. After trying everything they want, the kids will choose a few elements to practice with. Then, at the end, we would like to make a nice performance.
 

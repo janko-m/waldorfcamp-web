@@ -10,6 +10,6 @@ Olib is one of the most beautiful Croatian islands located in the Zadar archipel
 
 ## Transfer
 
-You can take a ferry from Zadar which will only take about two hours. You may check for ferry schedules at [Jadrolinija](http://www.jadrolinija.hr) to avoid any inconvenience (District of Zadar: Zadar -- Premuda/Mali Losinj).
+You can take a ferry from Zadar which will only take about two hours. You may check for ferry schedules at [Jadrolinija](http://www.jadrolinija.hr) ([schedule](http://www.jadrolinija.hr/docs/default-source/red-plovidbe/2015/401-sezona-2015-en.pdf?sfvrsn=2)) to avoid any inconvenience (District of Zadar: Zadar – Premuda/Mali Losinj).
 
-You can also take the catamaran ([Miatours](http://www.miatours.hr)) which is faster, but no cars or bikes are allowed. On catamaran there is also a baggage limit - one piece of baggage is allowed per person. It is desirable to buy a ticket for the ferry or catamaran in advance, and if you are interested in this possibility, please contact the organizers.
+You can also take the catamaran [Miatours](http://miatours.hr) ([schedule](http://miatours.hr/plovidbeni-red/zadar-premuda-silba-olib/ljetni)) which is faster, but no cars or bikes are allowed. On catamaran there is also a baggage limit--one piece of baggage is allowed per person. It is desirable to buy a ticket for the ferry or catamaran in advance, and if you are interested in this possibility, please contact the organizers.

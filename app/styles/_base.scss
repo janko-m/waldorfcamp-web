@@ -16,6 +16,13 @@ main {
   flex: 1;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  small {
+    font-weight: normal;
+    color: gray;
+  }
+}
+
 img, svg, iframe {
   vertical-align: middle;
 }

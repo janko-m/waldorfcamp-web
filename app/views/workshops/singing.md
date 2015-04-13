@@ -1,10 +1,10 @@
 ---
-title: Singing
+title: Singing & Playing
 type: workshops
 description: The workshop’s objective is to develop the awareness and vocal music with a repertoire that, by its nature, can be learned and implemented without any specific musical knowledge.
 ---
 
-# Singing
+# Singing & Playing
 
 The workshop’s objective is to develop the awareness and vocal music with a repertoire that, by its nature, can be learned and implemented without any specific musical knowledge. The course is divided on three levels:
 
