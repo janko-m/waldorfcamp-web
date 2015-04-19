@@ -79,7 +79,7 @@ With Igor fun never ends: guided and organized games for the smallest ones and f
 
 ## Additional Workshops <small>not included in the participation fee</small>
 
-### [Making a Musical Instrument](/workshops/rain-stick) <small>first two weeks</small>
+### [Making a Musical Instrument](/workshops/making-a-musical-instrument) <small>first two weeks</small>
 
 This year, we will make a “rain stick”--Aztec instrument used in rainmaking rituals. With this instrument, the Aztec hoped to wake the gods of thunder and rain.
 

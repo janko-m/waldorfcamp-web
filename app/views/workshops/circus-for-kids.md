@@ -15,3 +15,8 @@ We will have a lot of fun practicing circus skills like acrobatics, juggling, ba
 - **Magic**: a few tricks with acting parts.
 
 **Leader**: Daniel Torron Mack
+
+## Previous Leaders
+
+  - Željko Hajsok ([website](http://www.kam-hram.com/))
+  - Eva …
