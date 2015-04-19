@@ -1,6 +1,7 @@
 /* jshint camelcase: false */
 
 (function() {
+  'use strict';
 
   var container = document.querySelector('.page-gallery .main');
   var user = '66667715@N07';
@@ -29,7 +30,7 @@
       per_page: 10,
       page: page
     }, function (err, result) {
-      _.forEach(result.photos.photo, function (photo) {
+      _.each(result.photos.photo, function (photo) {
         var li = document.createElement('li');
         var a = document.createElement('a');
         var img = document.createElement('img');
@@ -41,7 +42,7 @@
         img.style.opacity = '0';
         img.onload = function () {
           this.style.opacity = '1';
-        }
+        };
 
         a.href = photo.url_l;
 

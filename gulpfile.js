@@ -37,7 +37,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('html', ['views', 'styles'], function () {
-  var assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
+  var assets = $.useref.assets({searchPath: ['app']});
 
   return gulp.src('.tmp/*.html')
     .pipe(assets)
@@ -74,8 +74,7 @@ gulp.task('serve', ['views', 'styles'], function () {
     open: false,
     port: 9000,
     server: {
-      baseDir: ['.tmp', 'app'],
-      routes: {'/bower_components': 'bower_components'}
+      baseDir: ['.tmp', 'app']
     }
   });
 
@@ -88,24 +87,6 @@ gulp.task('serve', ['views', 'styles'], function () {
 
   gulp.watch('app/{views,layouts}/**/*.{html,md}', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
-  gulp.watch('bower.json', ['wiredep']);
-});
-
-// inject bower components
-gulp.task('wiredep', function () {
-  var wiredep = require('wiredep').stream;
-
-  gulp.src('app/styles/main.scss')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
-    }))
-    .pipe(gulp.dest('app/styles'));
-
-  gulp.src('app/views/default.html')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)*\.\./
-    }))
-    .pipe(gulp.dest('app/views'));
 });
 
 gulp.task('build', ['html', 'images', 'extras'], function () {
