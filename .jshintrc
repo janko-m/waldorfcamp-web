@@ -11,9 +11,15 @@
   "newcap": true,
   "noarg": true,
   "node": true,
-  "predef": ["_", "Flickr", "imagesLoaded"],
+  "predef": [
+    "React",
+    "_",
+    "pegasus",
+    "Flickr",
+    "imagesLoaded"
+  ],
   "quotmark": "single",
   "strict": false,
   "undef": true,
-  "unused": true
+  "unused": false
 }

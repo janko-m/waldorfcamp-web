@@ -1,8 +1,10 @@
-.page-gallery .main ol {
-  @extend .list-unstyled;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+.gallery {
+  ol {
+    @extend .list-unstyled;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
   li {
     flex: 0 0 (100%/3);

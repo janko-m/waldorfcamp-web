@@ -19,6 +19,14 @@ gulp.task('views', function () {
     .pipe(gulp.dest('.tmp'));
 });
 
+gulp.task('scripts', function () {
+  return gulp.src('app/scripts/**/*.jsx')
+    .pipe($.sourcemaps.init())
+    .pipe($.react())
+    .pipe($.sourcemaps.write())
+    .pipe(gulp.dest('.tmp/scripts'));
+});
+
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
     .pipe($.sourcemaps.init())
@@ -36,8 +44,8 @@ gulp.task('styles', function () {
     .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('html', ['views', 'styles'], function () {
-  var assets = $.useref.assets({searchPath: ['app']});
+gulp.task('html', ['views', 'scripts', 'styles'], function () {
+  var assets = $.useref.assets({searchPath: ['.tmp', 'app']});
 
   return gulp.src('.tmp/*.html')
     .pipe(assets)
@@ -68,7 +76,7 @@ gulp.task('extras', function () {
 
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['views', 'styles'], function () {
+gulp.task('serve', ['views', 'scripts', 'styles'], function () {
   browserSync({
     notify: false,
     open: false,
@@ -82,11 +90,23 @@ gulp.task('serve', ['views', 'styles'], function () {
   gulp.watch([
     '.tmp/**/*.html',
     'app/scripts/**/*.js',
+    '.tmp/scripts/**/*.js',
     'app/images/**/*'
   ]).on('change', browserSync.reload);
 
   gulp.watch('app/{views,layouts}/**/*.{html,md}', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
+  gulp.watch('app/scripts/**/*.jsx', ['scripts']);
+});
+
+gulp.task('serve:dist', function () {
+  browserSync({
+    notify: false,
+    open: false,
+    port: 9000,
+    server: {baseDir: ['dist']},
+    ui: false
+  });
 });
 
 gulp.task('build', ['html', 'images', 'extras'], function () {
