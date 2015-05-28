@@ -1,21 +1,20 @@
-/* jshint camelcase: false */
+/* global Flickr */
 
-'use strict';
+import React        from 'react';
 
-var Photo = React.createClass({
-  render: function () {
-    return (
-      <li>
-        <a href={this.props.href}>
-          <img src={this.props.thumb} width={this.props.width}
-            alt={this.props.alt} />
-        </a>
-      </li>
-    );
-  }
-});
+import imagesLoaded from 'imagesloaded';
+import objectFit    from 'object-fit';
+import td           from 'throttle-debounce';
 
-var Gallery = React.createClass({
+import Photo        from './photo';
+
+import 'flickrapi';
+
+export default React.createClass({
+  getInitialState: function () {
+    return {photos: []};
+  },
+
   loadNext: function () {
     this.isLoading = true;
 
@@ -45,10 +44,6 @@ var Gallery = React.createClass({
     this.viewportHeight = window.innerHeight;
   },
 
-  getInitialState: function () {
-    return {photos: []};
-  },
-
   componentDidMount: function () {
     this.user           = '66667715@N07';
     this.pageHeight     = document.body.offsetHeight;
@@ -60,37 +55,32 @@ var Gallery = React.createClass({
 
     this.loadNext();
 
-    window.addEventListener('scroll', _.throttle(this.onScroll, 300));
-    window.addEventListener('resize', _.throttle(this.onResize, 300));
+    window.addEventListener('scroll', td.throttle(300, this.onScroll));
+    window.addEventListener('resize', td.throttle(300, this.onResize));
   },
 
   componentDidUpdate: function () {
-
-    // console.log(React.findDOMNode(this.refs), React.findDOMNode(this.refs.list));
-
-    imagesLoaded(React.findDOMNode(this.refs.list), function () {
+    imagesLoaded(React.findDOMNode(this.refs.list), () => {
       this.pageHeight = document.body.offsetHeight;
       this.isLoading = false;
-    }.bind(this));
+
+      objectFit.polyfill({
+        selector: '.gallery img',
+        fittype: 'cover'
+      });
+    });
   },
 
   render: function () {
-    var photoNodes = this.state.photos.map(function (photo) {
-      return (
-        <Photo key={photo.id} href={photo.url_l} thumb={photo.url_z} width={photo.width_z}
-          height={photo.height_z} alt={photo.title} />
-      );
-    });
-
     return (
       <ol ref="list">
-        {photoNodes}
+        {this.state.photos.map(function (photo) {
+          return (
+            <Photo key={photo.id} href={photo.url_l} thumb={photo.url_z} width={photo.width_z}
+              height={photo.height_z} alt={photo.title} />
+          );
+        })}
       </ol>
     );
   }
 });
-
-React.render(
-  <Gallery url="/photos.json" />,
-  document.querySelector('.gallery')
-);

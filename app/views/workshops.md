@@ -36,5 +36,5 @@ id: workshops
   - Drama
   - Breakdance
   - Capoeira
-  - Body Talk - Željko Hajsok
-  - Land Art - Marković
+  - Body Talk
+  - Land Art

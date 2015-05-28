@@ -1,25 +1,17 @@
 {
   "bitwise": true,
   "browser": true,
-  "camelcase": true,
-  "curly": true,
   "eqeqeq": true,
+  "eqnull": true,
   "esnext": true,
-  "immed": true,
-  "indent": 2,
   "latedef": true,
-  "newcap": true,
+  "mocha": true,
   "noarg": true,
   "node": true,
   "predef": [
-    "React",
-    "_",
-    "pegasus",
-    "Flickr",
-    "imagesLoaded"
+    "fetch",
+    "FontFaceObserver"
   ],
-  "quotmark": "single",
-  "strict": false,
   "undef": true,
-  "unused": false
+  "unused": true
 }

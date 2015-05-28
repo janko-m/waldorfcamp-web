@@ -10,6 +10,12 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: 'open sans', 'helvetica neue', helvetica, arial, sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
 }
 
 main {
