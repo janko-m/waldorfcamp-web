@@ -22,12 +22,12 @@ id: workshops
   - [Archery](archery)
   - [Thai Massage Therapy](massage)
   - [African Dances](african-dances)
-  - Mime
+  - [Mime](mime)
 
 ## Past Workshops
 
-  - [Caxixi](caxixi)
-  - [Maculele](maculele)
+  - Caxixi
+  - Maculele
   - Making Kites
   - Physics
   - Eurhythmics
@@ -35,3 +35,6 @@ id: workshops
   - Drumming
   - Drama
   - Breakdance
+  - Capoeira
+  - Body Talk - Željko Hajsok
+  - Land Art - Marković
